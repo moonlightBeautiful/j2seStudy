@@ -4,6 +4,7 @@ public class Test {
 
     /**
      * 参数是接口A
+     *
      * @param a
      */
     public void test(A a) {

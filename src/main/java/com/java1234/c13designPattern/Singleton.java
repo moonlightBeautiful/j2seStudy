@@ -17,6 +17,7 @@ public class Singleton {
 
     /**
      * 获取类加载时候初始化的实例
+     *
      * @return
      */
     public static Singleton getInstance() {
