@@ -7,20 +7,20 @@ public class Test {
      *
      * @param a
      */
-    public void test(A a) {
+    public void testSay(Human a) {
         a.say();
     }
 
     public static void main(String[] args) {
         Test t = new Test();
-        t.test(new B());
+        t.testSay(new Chinese());
 
         //这种情况可以 new 接口
-        t.test(new A() {
+        t.testSay(new Human() {
 
             @Override
             public void say() {
-                System.out.println("�����ڲ��࣬һ����ʹ��");
+                System.out.println("我是人类");
             }
 
         });
