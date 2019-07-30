@@ -10,7 +10,11 @@ public class TestSimpleDateFormat {
         //SimpleDateFormat是对Date类型的处理
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
-        System.out.println(sdf.format(date));
-        System.out.println(sdf.parse("2019-06-12 16:51:34"));
+        //把Date类型对象格式化成str
+        String strDate = sdf.format(date);
+        System.out.println(strDate);
+        //把String格式化成Date类型对象
+        Date dateFromStr = sdf.parse("2019-06-12 16:51:34");
+        System.out.println(dateFromStr);
     }
 }
