@@ -14,7 +14,9 @@ public class TestSimpleDateFormat {
         String strDate = sdf.format(date);
         System.out.println(strDate);
         //把String格式化成Date类型对象
-        Date dateFromStr = sdf.parse("2019-06-12 16:51:34");
-        System.out.println(dateFromStr);
+        Date dateFromStr = sdf.parse("2019-02-28 00:00:00");
+
+        System.out.println(dateFromStr.getTime());
+
     }
 }
