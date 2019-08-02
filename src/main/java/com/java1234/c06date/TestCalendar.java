@@ -19,6 +19,8 @@ public class TestCalendar {
                 + calendar.get(Calendar.SECOND) + "秒");
         date = calendar.getTime();
         System.out.println(date);
+
+        //时间往前2天
         calendar.set(Calendar.DAY_OF_MONTH, -4);
         System.out.println(calendar.get(Calendar.YEAR) + "年"
                 + (calendar.get(Calendar.MONTH) + 1) + "月"
