@@ -1,4 +1,4 @@
-package com.java1234.c04arrays;
+package com.java1234.c03arrays;
 
 import java.util.Arrays;
 

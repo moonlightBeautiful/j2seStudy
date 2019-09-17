@@ -1,7 +1,8 @@
 package com.java1234.c11collection;
 
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author gaoxu
@@ -15,14 +16,28 @@ public class c04HashMap {
         hashMap.put("2号", new Student("李四", 11));
         hashMap.put("3号", new Student("王五", 12));
 
-        Student s = hashMap.get("1号");
+        /*Student s = hashMap.get("1号");
         System.out.println(s);
-
-        Iterator<String> it = hashMap.keySet().iterator(); // 获取key的集合 ，再获取迭代器
+        // 获取key的迭代器
+        Iterator<String> it = hashMap.keySet().iterator();
         while (it.hasNext()) {
             String key = it.next(); // 获取key
             Student student = hashMap.get(key); // 获取值
             System.out.println("key=" + key + ",value=" + student);
+        }*/
+
+        /**
+         * Map中采用Entry内部类来表示一个映射项，映射项包含Key和Value (我们总说键值对键值对, 每一个键值对也就是一个Entry)
+         * entrySet里面的类型是Map.Entry，一般可以通过map.entrySet()得到。
+         * Map.Entry里面包含getKey()和getValue()方法
+         */
+
+        Set<Map.Entry<String, Student>> entryseSet = hashMap.entrySet();
+
+        for (Map.Entry<String, Student> entry : entryseSet) {
+
+            System.out.println(entry.getKey() + "," + entry.getValue());
+
         }
     }
 }

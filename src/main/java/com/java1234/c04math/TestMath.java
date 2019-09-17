@@ -1,4 +1,4 @@
-package com.java1234.c05math;
+package com.java1234.c04math;
 
 public class TestMath {
 
