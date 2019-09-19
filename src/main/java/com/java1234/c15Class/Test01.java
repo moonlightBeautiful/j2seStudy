@@ -1,17 +1,15 @@
 package com.java1234.c15Class;
 
 /**
- * 通过反射得到Class类的对象
+ * 通过 对象、类全名、类 反射得到Class类的对象（记录对象的类的信息）
  */
 public class Test01 {
 
     public static void main(String[] args) {
-        System.out.println("通过对象获取Class对象" +
-                "===============================================================================");
+       /* System.out.println("通过对象获取Class对象（也就是类）");
         Student student = new Student("张三", 18);
         System.out.println(student.getClass().getName());
-        System.out.println("通过全类名获取Class对象" +
-                "===============================================================================");
+        System.out.println("通过全类名（包路径+类名）获取Class对象（也就是类）");
         Class<?> c = null;
         try {
             c = Class.forName("com.java1234.c15Class.Student");
@@ -19,8 +17,8 @@ public class Test01 {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("通过类的class" +
-                "属性获取Class对象===============================================================================");
-        System.out.println(Student.class.getName());
+        System.out.println("通过类的class属性获取Class对象（也就是类）");
+        String className = Student.class.getName();
+        System.out.println(className);*/
     }
 }

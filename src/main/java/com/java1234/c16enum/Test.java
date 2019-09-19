@@ -7,21 +7,27 @@ package com.java1234.c16enum;
  */
 public class Test {
 
-    private Color color;
-
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
     public static void main(String[] args) {
-        Test ct = new Test();
-        ct.setColor(Color.RED);
-        System.out.println(Color.RED);
-        TrafficLight trafficLight = new TrafficLight();
+        System.out.println("遍历Color的每一项：");
+        for (Color e : Color.values()) {
+            System.out.println(e.toString());
+        }
 
+        System.out.println("使用Color的项：");
+        switch (Color.GREEN) {
+            case GREEN:
+                System.out.println("颜色是绿色~");
+                break;
+            case RED:
+                System.out.println("颜色是红色~");
+                break;
+            default:
+                System.out.println("颜色是黄色~");
+                break;
+        }
+       /* if (1 == Color.GREEN.getStateNum()) {
+            //AuditState.UNAUDIT.toString()获取字符串描述
+            System.out.println(Color.GREEN.toString() + "标识是 " + Color.GREEN.getStateNum());
+        }*/
     }
 }

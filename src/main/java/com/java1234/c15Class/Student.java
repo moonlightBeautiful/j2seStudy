@@ -1,9 +1,11 @@
 package com.java1234.c15Class;
 
-public class Student {
+public class Student extends People {
 
     private String name;
     private Integer age;
+    public String wife = "pink";
+    public static final String COLOR = "pink";
 
     public Student() {
     }
@@ -11,6 +13,11 @@ public class Student {
     public Student(String name, Integer age) {
         super();
         this.name = name;
+        this.age = age;
+    }
+
+    private Student(Integer age) {
+        super();
         this.age = age;
     }
 
@@ -35,7 +42,16 @@ public class Student {
         return "Student [name=" + name + ", age=" + age + "]";
     }
 
-    public void say() {
-        System.out.println("�ҵ�������" + name);
+    public static void say() {
+        System.out.println("说你好");
+    }
+
+    private void eat() {
+        System.out.println("吃馒头");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("子跑");
     }
 }
