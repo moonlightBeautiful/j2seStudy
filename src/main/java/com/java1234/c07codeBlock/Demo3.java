@@ -6,34 +6,28 @@ public class Demo3 {
      * 静态构造代码块，仅在类加载的时候初始化一次
      */
     static {
-        System.out.println("��̬�����");
+        System.out.println("静态构造代码块，仅在类加载的时候初始化一次");
     }
 
     /**
-     * �����
-     */ {
-        System.out.println("ͨ�ù����");
-    }
-
-    /**
-     * ���췽��һ
+     * 构造方法1
      */
     public Demo3() {
-        System.out.println("���췽��һ");
+        System.out.println("构造方法1");
     }
 
     /**
-     * ���췽����
+     * 构造方法2
      */
     public Demo3(int i) {
-        System.out.println("���췽����");
+        System.out.println("构造方法2");
     }
 
     /**
-     * ���췽����
+     * 构造方法3
      */
     public Demo3(int i, int j) {
-        System.out.println("���췽����");
+        System.out.println("构造方法3");
     }
 
     public static void main(String[] args) {
