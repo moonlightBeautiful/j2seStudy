@@ -7,7 +7,7 @@ import java.io.Reader;
 public class Demo02 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("c://java测试目录//java测试文件.txt");
+        File file = new File("c://java测试目录//java测试文件.properties");
         Reader reader = new FileReader(file);
         char c[] = new char[1024];
         int len = 0;

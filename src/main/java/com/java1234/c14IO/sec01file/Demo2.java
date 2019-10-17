@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Demo2 {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("c://java测试目录//java测试文件.txt");
+        File file = new File("c://java测试目录//java测试文件.properties");
         if (file.exists()) { //判断文件是否存在
             boolean b = file.delete(); // 删除已存在的文件
             if (b) {

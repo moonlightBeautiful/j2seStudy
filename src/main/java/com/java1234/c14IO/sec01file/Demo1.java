@@ -9,11 +9,11 @@ public class Demo1 {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        File file = new File("c://java测试目录");
+        /*File file = new File("c://java测试目录");
         boolean b = file.mkdir(); // 创建目录
         if (b) {
             System.out.println("创建目录成功");
-            file = new File("c://java测试目录//java测试文件.txt");
+            file = new File("c://java测试目录//java测试文件.properties");
             boolean b2 = file.createNewFile(); // 创建文件
             if (b2) {
                 System.out.println("创建文件成功");
@@ -22,6 +22,8 @@ public class Demo1 {
             }
         } else {
             System.out.println("创建目录失败");
-        }
+        }*/
+        File file = new File("/test/java测试目录");
+
     }
 }

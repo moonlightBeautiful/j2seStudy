@@ -15,7 +15,7 @@ public class Demo01 {
      * @throws Exception
      */
     public static void bufferStream() throws Exception {
-        BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("c://java测试目录//java测试文件.txt"));
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("c://java测试目录//java测试文件.properties"));
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("c://java测试目录//java" +
                 "测试文件02.txt"));
         int b = 0;
@@ -36,7 +36,7 @@ public class Demo01 {
      * @throws Exception
      */
     public static void stream() throws Exception {
-        InputStream inputStream = new FileInputStream("c://java测试目录//java测试文件.txt");
+        InputStream inputStream = new FileInputStream("c://java测试目录//java测试文件.properties");
         OutputStream outputStream = new FileOutputStream("c://java测试目录//java测试文件02.txt");
         int b = 0;
         long startTime = System.currentTimeMillis();

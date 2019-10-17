@@ -7,7 +7,7 @@ import java.io.InputStream;
 public class Demo02 {
 
 	public static void main(String[] args) throws Exception {
-		File file=new File("c://java测试目录//java测试文件.txt");
+		File file=new File("c://java测试目录//java测试文件.properties");
 		InputStream inputStream=new FileInputStream(file);
 		int fileLength=(int) file.length();
 		byte b[]=new byte[fileLength];
