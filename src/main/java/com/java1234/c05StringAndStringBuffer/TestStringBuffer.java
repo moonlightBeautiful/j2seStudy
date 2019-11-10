@@ -1,4 +1,4 @@
-package com.java1234.c05stringBuffer;
+package com.java1234.c05StringAndStringBuffer;
 
 public class TestStringBuffer {
 
