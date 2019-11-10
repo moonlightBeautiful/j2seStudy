@@ -17,36 +17,47 @@ public class BigDecimalStudy {
          *
          */
         /**
-         *  BigDecimal(double d); //此种方式绝对不允许!!!!!虽然不报错，但是精度会丢失
+         *  BigDecimal(double d); //此种方式绝对不允许!!!!!虽然不报错，但是精度会丢失，如果非要把double转成BigDecimal，则如下使用
+         *      BigDecimal.valueOf(2.3 double);
+         *      new BigDecimal(Double.toString(2.3));
          *  new BigDecimal(String s);   //常用,推荐使用
          *  BigDecimal.valueOf(double d);     //常用,推荐使用
          */
 
 
-       /* double d1 = 0.10334;
-        double d2 = 1234.0;
+        double d1 = 0.2;
+        double d2 = 0.1;
 
-        //此种方式绝对不允许!!!!!
-        System.out.println("new BigDecimal(" + d1 + ")=" + new BigDecimal(d1));
-        System.out.println("new BigDecimal(" + d2 + ")=" + new BigDecimal(d2));
+        //为什么不能使用double进行运算，精度可能会丢失!!!!
+        System.out.println("为什么不能使用double，因为double间的运算可能会出错。");
+        System.out.println(d1 + " + " + d2 + " = " + (0.2 + 0.1));
+        System.out.println(d1 + " - " + d2 + " = " + (0.3 - 0.1));
+        System.out.println(d1 + " * " + d2 + " = " + (0.2 * 0.1));
+        System.out.println(d1 + " / " + d2 + " = " + (0.3 / 0.1));
         System.out.println("");
 
+        //BigDecimal的实例化
+        //new BigDecimal(double)此种方式绝对不允许，精度会丢失!!!!!
+        System.out.println("BigDecimal的实例化方式一");
+        System.out.println("new BigDecimal(double)，精度会丢失!!!!!");
+        System.out.println("new BigDecimal(" + d1 + ") = " + new BigDecimal(d1));
+        System.out.println("new BigDecimal(" + d2 + ") = " + new BigDecimal(d2));
+        System.out.println("new BigDecimal(double)，解决精度会丢失!!!!!BigDecimal.valueOf(double);");
+        System.out.println("BigDecimal.valueOf(" + d2 + ") = " + BigDecimal.valueOf(d2));
+        System.out.println("new BigDecimal(double)，解决精度会丢失!!!!!new BigDecimal(Double.toString(double));");
+        System.out.println("new BigDecimal(Double.toString(" + d2 + ") = " + new BigDecimal(Double.toString(d2)));
+        System.out.println("");
+
+        System.out.println("BigDecimal的实例化方式二");
         System.out.println("new BigDecimal(String.valueOf(" + d1 + "))=" + new BigDecimal(String.valueOf(d1)));
         System.out.println("new BigDecimal(String.valueOf(" + d2 + "))=" + new BigDecimal(String.valueOf(d2)));
         System.out.println("");
 
-        System.out.println("new BigDecimal(String.valueOf(" + d1 + "))=" + new BigDecimal(Double.toString(d1)));
-        System.out.println("new BigDecimal(String.valueOf(" + d2 + "))=" + new BigDecimal(Double.toString(d2)));
-        System.out.println("");
-
-        System.out.println("BigDecimal.valueOf(" + d1 + ")=" + BigDecimal.valueOf(d1));
-        System.out.println("BigDecimal.valueOf(" + d2 + ")=" + BigDecimal.valueOf(d2));
-        System.out.println("");
-
+        System.out.println("BigDecimal的实例化1和1.00000的比较");
         BigDecimal b1 = BigDecimal.valueOf(1);
         BigDecimal b2 = BigDecimal.valueOf(1.00000);
         System.out.println(b1.equals(b2));
-        System.out.println(b1.compareTo(b2));*/
+        System.out.println(b1.compareTo(b2));
 
         /**
          * setScale方法用于格式化小数点，默认方式是四舍五入
@@ -66,5 +77,20 @@ public class BigDecimalStudy {
         BigDecimal setScale4 = decimal.setScale(5, BigDecimal.ROUND_HALF_DOWN);
         System.out.println(setScale4);
 
+        /*
+            BigDecimal的加减乘除
+         */
+        BigDecimal a = new BigDecimal("4.50");
+        BigDecimal b = new BigDecimal("1.5");
+
+        System.out.println("a + b =" + a.add(b));
+        System.out.println("a - b =" + a.subtract(b));
+        System.out.println("a * b =" + a.multiply(b));
+        System.out.println("a / b =" + a.divide(b));
+
+        BigDecimal c = new BigDecimal("4.50");
+        BigDecimal d = new BigDecimal("1.3");
+        System.out.println("c / d =" + c.divide(d,2,BigDecimal.ROUND_HALF_UP));
+        /*System.out.println("c / d =" + c.divide(d));*/
     }
 }
