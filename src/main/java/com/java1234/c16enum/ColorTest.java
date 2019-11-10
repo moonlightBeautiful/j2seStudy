@@ -5,15 +5,17 @@ package com.java1234.c16enum;
  * @date 2019-07-12 10:57
  * @description ... 类
  */
-public class Test {
+public class ColorTest {
 
     public static void main(String[] args) {
-        System.out.println("遍历Color的每一项：");
-        for (Color e : Color.values()) {
-            System.out.println(e.toString());
+        //枚举类的基本操作
+        System.out.println("Color.GREEN=" + Color.GREEN);
+        System.out.println("Color.GREEN.toString()=" + Color.GREEN.toString());
+        System.out.println("Color.values()：遍历枚举类Color的每一项。");
+        for (Color color : Color.values()) {
+            System.out.println(color.toString() + "，" + color.getStateNum());
         }
-
-        System.out.println("使用Color的项：");
+        System.out.println("Color在switch (Color.GREEN)中的应用");
         switch (Color.GREEN) {
             case GREEN:
                 System.out.println("颜色是绿色~");
@@ -25,9 +27,5 @@ public class Test {
                 System.out.println("颜色是黄色~");
                 break;
         }
-       /* if (1 == Color.GREEN.getStateNum()) {
-            //AuditState.UNAUDIT.toString()获取字符串描述
-            System.out.println(Color.GREEN.toString() + "标识是 " + Color.GREEN.getStateNum());
-        }*/
     }
 }
