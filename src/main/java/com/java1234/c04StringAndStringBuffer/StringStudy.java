@@ -6,14 +6,14 @@ public class StringStudy {
          * String 的 内容放在了堆区中，堆分为公共堆和私有堆
          */
         /**
-         * 公共堆
+         * 公共堆，不使用new，对String对象操作，等同于重新生成一个String对象
          */
         String str1 = "123";    //公共堆区中 创建了123的空间
         str1 += "abc";    //公共堆区中，丢掉了123的空间，然后创建了123abc的空间
         System.out.println(str1);
 
         /**
-         * 私有堆
+         * 私有堆，使用new
          */
         String str2 = new String("123");
         System.out.println(str2);
