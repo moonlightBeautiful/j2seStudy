@@ -11,4 +11,4 @@
     测试是否成功
         cmd输入 java -version
 java运行原理
-    是编译型语言：java文件被变异成class文件，在jvm上运行
+    是编译型语言：java文件被变异成class文件，在jvm上运行class

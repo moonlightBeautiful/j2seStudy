@@ -5,11 +5,23 @@ package com.java1234.c02basicGrammar;
  * @date 2019-09-17 17:03
  * @description 基本数据类型学习
  */
-public class BasicDataTypeStudy {
+public class BasicGrammarStudy {
     /**
      * 基本数据类型分为8类： 数值类 byte short int long float double 布尔类 boolean 字符类 char
      */
+    /**
+     * 运算和表达式
+     *
+     * @param args
+     */
     public static void main(String[] args) {
+        //基本数据源类型-----------------------------------------
+        /**
+         * 数值类，整数型
+         * byte short int long
+         *
+         */
+        //不做样例
         /**
          * 数值类，浮点类
          * float占32位（bit），double占 64位（bit）
@@ -22,8 +34,24 @@ public class BasicDataTypeStudy {
         System.out.println(d);
         /**
          * 字符
-         * 普通字符：'A'等。转义字符：'\n'、’\\'。unicode码：'\u66f09'。
+         * 普通字符：'A'等。转义字符：\开头，'\n'、’\\'。unicode码：\u开头，'\u66f0'。
          * 全世界的语言都可以用Unicode码表示
          */
+        char a = 'A';
+        char b = '\\';
+        char c = '\n';
+        char h = '\u66f0';
+
+
+        aa:
+        for(int i = 0 ; i < 100 ; i++){
+            continue aa;
+        }
+
+        bb:
+        for(int i = 0 ; i < 100 ; i++){
+            break bb;
+        }
+
     }
 }
