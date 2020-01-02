@@ -1,7 +1,7 @@
-package com.java1234.c08innerClass;
+package com.java1234.c03ObjectOrientedProgramming;
 
 /**
- * �ⲿ��
+ *  外部类与内部类
  *
  * @author user
  */
@@ -26,7 +26,12 @@ public class Outer {
     }
 
     public static void main(String[] args) {
+        //简介调用内部类
+        /*Outer outer = new Outer();
+        outer.show();*/
+        //直接调用内部类
         Outer outer = new Outer();
-        outer.show();
+        Outer.Inner inner = outer.new Inner();
+        inner.show();
     }
 }

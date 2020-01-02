@@ -12,3 +12,5 @@
         cmd输入 java -version
 java运行原理
     是编译型语言：java文件被变异成class文件，在jvm上运行class
+引入eclipse
+    现在都不用eclipse，用idea
