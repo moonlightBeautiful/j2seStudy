@@ -1,4 +1,4 @@
-package com.java1234.c03ObjectOrientedProgramming;
+package com.java1234.c03objectOrientedProgramming;
 
 /**
  *  外部类与内部类
