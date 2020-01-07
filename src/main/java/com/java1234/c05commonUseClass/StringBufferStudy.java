@@ -1,4 +1,4 @@
-package com.java1234.c04StringAndStringBuffer;
+package com.java1234.c05commonUseClass;
 
 public class StringBufferStudy {
 

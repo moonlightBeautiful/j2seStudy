@@ -1,6 +1,6 @@
-package com.java1234.c07codeBlock;
+package com.java1234.c03objectOrientedProgramming;
 
-public class Demo1 {
+public class CodeBlockTest1 {
 
     public static void main(String[] args) {
         int a = 1;
