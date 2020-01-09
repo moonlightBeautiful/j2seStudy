@@ -34,7 +34,7 @@ public class BasicGrammarStudy {
         System.out.println(d);
         /**
          * 字符
-         * 普通字符：'A'等。转义字符：\开头，'\n'、’\\'。unicode码：\u开头，'\u66f0'。
+         * 普通字符：'A'等。转义字符：\开头，'\n'、’\\'。unicode码 斜巷u开头
          * 全世界的语言都可以用Unicode码表示
          */
         char a = 'A';
@@ -43,7 +43,7 @@ public class BasicGrammarStudy {
         char h = '\u66f0';
 
 
-        aa:
+        /*aa:
         for(int i = 0 ; i < 100 ; i++){
             continue aa;
         }
@@ -52,6 +52,6 @@ public class BasicGrammarStudy {
         for(int i = 0 ; i < 100 ; i++){
             break bb;
         }
-
+*/
     }
 }
