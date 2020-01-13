@@ -1,4 +1,4 @@
-package com.java1234.c07generics;
+package com.java1234.c06generics;
 
 import java.util.ArrayList;
 import java.util.List;

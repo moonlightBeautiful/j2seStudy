@@ -1,4 +1,4 @@
-package com.java1234.c15Class;
+package com.java1234.c07Class;
 
 /**
  * @author gaoxu
@@ -8,6 +8,7 @@ package com.java1234.c15Class;
 public class People {
     private int aaa;
     public static final String HOBBY = "run";
+
     public int getAaa() {
         return aaa;
     }
@@ -15,8 +16,10 @@ public class People {
     public void setAaa(int aaa) {
         this.aaa = aaa;
     }
+
     public People() {
     }
+
     public People(int aaa) {
         this.aaa = aaa;
     }

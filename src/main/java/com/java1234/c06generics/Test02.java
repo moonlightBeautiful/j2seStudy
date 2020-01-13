@@ -1,4 +1,4 @@
-package com.java1234.c07generics;
+package com.java1234.c06generics;
 
 /**
  * @author gaoxu

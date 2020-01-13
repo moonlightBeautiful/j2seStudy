@@ -1,4 +1,4 @@
-package com.java1234.c15Class;
+package com.java1234.c07Class;
 
 public class Student extends People {
 

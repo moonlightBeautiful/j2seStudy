@@ -1,12 +1,11 @@
-package com.java1234.c15Class;
+package com.java1234.c07Class;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * 通过 对象、类全名、类 反射得到Class类的对象（记录对象的类的信息）
- * 然后通过Class类的对象（记录对象的类的信息） 获取方法和属性
+ * 通过Class类的对象（记录对象的类的信息） 获取方法和属性
  * <p>
  * 带Declared返回的是当前Class对象（类）中明确声明过的Method/Field(包括：public、protected、default、private，不包括：父类或父接口的Method/Field)
  * 不带Declared的返回的是当前Class对象（类）的实例能调用的所有public Method/Field（包含从父类或父接口继承而来没有重写的public Method/Field）
@@ -14,14 +13,11 @@ import java.lang.reflect.Method;
 public class Test03 {
 
     public static void main(String[] args) {
-        Class<?> c = null;
         try {
-            c = Class.forName("com.java1234.c15Class.Student");
+            Class<?> c = Class.forName("com.java1234.c07Class.Student");
             /**
-             * 带Declared返回的是当前Class对象的所有(包括：public,protected,default,private)Method/Field,但不包括父类或父接口的Method/Field
+             * 带Declared返回的是当前类声明的所有(包括：public,protected,default,private)Method/Field,但不包括父类或父接口的Method/Field
              */
-            System.out.println("带Declared");
-
             Constructor<?> declaredCons[] = c.getDeclaredConstructors();
             for (Constructor<?> con : declaredCons) {
                 System.out.println("构造方法：" + con);
