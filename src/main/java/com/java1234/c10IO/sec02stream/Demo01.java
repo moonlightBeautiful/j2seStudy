@@ -3,15 +3,23 @@ package com.java1234.c10IO.sec02stream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 
 public class Demo01 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶.properties");
+        File file = new File("c://java²âÊÔÎÄ¼ş.properties");
         InputStream inputStream = new FileInputStream(file);
         byte b[] = new byte[1024];
         int len = inputStream.read(b);
         inputStream.close();
-        System.out.println("è¯»å–åˆ°çš„å†…å®¹ï¼š" + new String(b, 0, len));
+        System.out.println("¶ÁÈ¡µ½µÄÄÚÈİ£º" + new String(b, 0, len,"UTF-8"));
+
+        /*//»ñÈ¡ÏµÍ³Ä¬ÈÏ±àÂë
+        System.out.println("ÏµÍ³Ä¬ÈÏ±àÂë£º" + System.getProperty("file.encoding"));//²éÑ¯½á¹ûGBK
+        //ÏµÍ³Ä¬ÈÏ×Ö·û±àÂë
+        System.out.println("ÏµÍ³Ä¬ÈÏ×Ö·û±àÂë:" + Charset.defaultCharset()); //²éÑ¯½á¹ûGBK
+        //²Ù×÷ÏµÍ³ÓÃ»§Ê¹ÓÃµÄÓïÑÔ
+        System.out.println("ÏµÍ³Ä¬ÈÏÓïÑÔ:" + System.getProperty("user.language")); //²éÑ¯½á¹ûzh*/
     }
 }

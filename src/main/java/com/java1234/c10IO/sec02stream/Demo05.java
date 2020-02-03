@@ -7,9 +7,9 @@ import java.io.OutputStream;
 public class Demo05 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶.properties");
+        File file = new File("c://java²âÊÔÄ¿Â¼//java²âÊÔÎÄ¼ş.properties");
         OutputStream out = new FileOutputStream(file, true);
-        String str = "çˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»";
+        String str = "°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î";
         byte b[] = str.getBytes();
         out.write(b);
         out.close();

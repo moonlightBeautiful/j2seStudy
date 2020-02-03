@@ -10,47 +10,50 @@ import java.io.OutputStream;
 public class Demo01 {
 
     /**
-     * ä½¿ç”¨ç¼“å†²
+     * Ê¹ÓÃ»º³å
      *
      * @throws Exception
      */
     public static void bufferStream() throws Exception {
-        BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶.properties"));
-        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("c://javaæµ‹è¯•ç›®å½•//java" +
-                "æµ‹è¯•æ–‡ä»¶02.txt"));
-        int b = 0;
+        BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream("c://java²âÊÔÎÄ¼ş.properties"));
+        BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream("c://java²âÊÔÎÄ¼ş2.properties"));
         long startTime = System.currentTimeMillis();
-        while ((b = bufferedInputStream.read()) != -1) {
-            bufferedOutputStream.write(b);
-        }
-        bufferedInputStream.close();
-        bufferedOutputStream.close();
-        long endTime = System.currentTimeMillis();
-        System.out.println("ä½¿ç”¨ç¼“å†²èŠ±è´¹æ—¶é—´ï¼š" + (endTime - startTime));
-    }
 
-
-    /**
-     * ä¸ä½¿ç”¨ç¼“å†²
-     *
-     * @throws Exception
-     */
-    public static void stream() throws Exception {
-        InputStream inputStream = new FileInputStream("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶.properties");
-        OutputStream outputStream = new FileOutputStream("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶02.txt");
-        int b = 0;
-        long startTime = System.currentTimeMillis();
+        int b;
         while ((b = inputStream.read()) != -1) {
             outputStream.write(b);
         }
         inputStream.close();
         outputStream.close();
+
         long endTime = System.currentTimeMillis();
-        System.out.println("ä¸ä½¿ç”¨ç¼“å†²èŠ±è´¹æ—¶é—´ï¼š" + (endTime - startTime));
+        System.out.println("Ê¹ÓÃ»º³å»¨·ÑÊ±¼ä£º" + (endTime - startTime));
+    }
+
+
+    /**
+     * ²»Ê¹ÓÃ»º³å
+     *
+     * @throws Exception
+     */
+    public static void stream() throws Exception {
+        InputStream inputStream = new FileInputStream("c://java²âÊÔÄ¿Â¼//java²âÊÔÎÄ¼ş.properties");
+        OutputStream outputStream = new FileOutputStream("c://java²âÊÔÄ¿Â¼//java²âÊÔÎÄ¼ş02.txt");
+        long startTime = System.currentTimeMillis();
+
+        int b = 0;
+        while ((b = inputStream.read()) != -1) {
+            outputStream.write(b);
+        }
+        inputStream.close();
+        outputStream.close();
+
+        long endTime = System.currentTimeMillis();
+        System.out.println("²»Ê¹ÓÃ»º³å»¨·ÑÊ±¼ä£º" + (endTime - startTime));
     }
 
     public static void main(String[] args) throws Exception {
         stream();
-        bufferStream();
+       /* bufferStream();*/
     }
 }

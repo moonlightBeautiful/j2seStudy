@@ -2,8 +2,8 @@ IO流学习
     简介:
         两个设备之间的数据的传输成为流，流是字节的集合。把流抽象成各种类，方便对数据操作。
     I/O流结构:
-        根据数据类型不同，分为字符流和字节流。
-        根据数据流向不同，分为输入流和输出流。
+        一般是内存和硬盘之间的数据传输
+        根据数据类型不同，分为字符流和字节流。根据数据流向不同，分为输入流和输出流。
                     Reader
             字节流
                     Writer
@@ -19,3 +19,31 @@ IO流学习
             4.boolean exists()：是否存在
             5.File[] listFiles()：文件件下的文件和文件夹
             6.boolean  isDirectory()：是否是文件夹
+    字节流：非文本的文件，也可以用于文本文件。
+        InputStream输入流：抽象类，java会使用系统默认的字符编码把文件内容字符转换成字节流
+            主要用到子类FileInputStream 和 BufferedInputStream
+        OutStream输出流：抽象类，java会使用系统默认的字符编码把字节流转换成文件内容字符
+            主要用到子类FileOutputStream 和 BufferedOutputStream
+        1.FileInputStream：
+            方法：
+                1.read(字节数组)：从数据流中取字节到字节数组中，最后最好把字节数组转成String
+                2.read()：从数据流中取一个字节并返回这个字节，类型是int，要转换成字节byte。读取不到就返回-1。
+            new String(字节数组,"字符编码，中文系统默认是GBK)
+        2.FileOutputStream
+            可以选择覆盖或者追加方式输出字节流到文件
+            方法：
+                1.write(字节数组)：把字节数组内容用系统默认字符编码方式写入到文件，会把原文件的编码方式变成系统默认字符编码方式。
+             byte b[] = str.getBytes("字符编码，中文系统默认是GBK");
+        3.带缓冲的输入输出字节流
+            就是在内存和硬盘之间建立缓存区，流先放在缓冲区，用到再拿出来使用，效率高。
+            类：BufferedInputStream和BufferedOutputStream，方法和FileInputStream与FileOutputStream一样。
+    字符流：文本文件
+        1.Reader
+            方法：
+                1.read(字符数组)：从数据流中取字符到字符数组中，最后最好把字符数组转成String。 
+                2.read()：从数据流中取一个字符并返回这个字符，类型是int，要转换成字符char。读取不到就返回-1。
+            new String(字符数组)
+        2.Write
+            方法：
+                1.write("字符串)
+    NOTE：流用完之后记得关闭

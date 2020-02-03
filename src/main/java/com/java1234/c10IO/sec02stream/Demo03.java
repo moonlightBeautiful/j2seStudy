@@ -7,7 +7,7 @@ import java.io.InputStream;
 public class Demo03 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("c://java娴嬭瘯鐩綍//java娴嬭瘯鏂囦欢.properties");
+        File file = new File("c://java测试文件.properties");
         InputStream inputStream = new FileInputStream(file);
         int fileLength = (int) file.length();
         byte b[] = new byte[fileLength];
@@ -18,6 +18,6 @@ public class Demo03 {
             b[len++] = (byte) temp;
         }
         inputStream.close();
-        System.out.println("璇诲彇鍒扮殑鍐呭" + new String(b));
+        System.out.println("读取到的内容" + new String(b,"UTF-8"));
     }
 }

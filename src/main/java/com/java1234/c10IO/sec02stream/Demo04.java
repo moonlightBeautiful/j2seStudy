@@ -7,10 +7,10 @@ import java.io.OutputStream;
 public class Demo04 {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶.properties");
+        File file = new File("c://java²âÊÔÎÄ¼þ.properties");
         OutputStream out = new FileOutputStream(file);
-        String str = "çˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»ï¼Œçˆ±ç”Ÿæ´»";
-        byte b[] = str.getBytes();
+        String str = "°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î£¬°®Éú»î";
+        byte b[] = str.getBytes("UTF-8");
         out.write(b);
         out.close();
     }
