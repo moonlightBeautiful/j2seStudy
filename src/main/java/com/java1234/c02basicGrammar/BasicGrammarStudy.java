@@ -33,7 +33,7 @@ public class BasicGrammarStudy {
         double d = 123.123123123123;
         System.out.println(d);
         /**
-         * 字符
+         * 字符：单一的 16 位 Unicode 字符
          * 普通字符：'A'等。转义字符：\开头，'\n'、’\\'。unicode码 斜巷u开头
          * 全世界的语言都可以用Unicode码表示
          */
