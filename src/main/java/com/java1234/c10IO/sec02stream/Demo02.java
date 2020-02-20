@@ -7,12 +7,12 @@ import java.io.InputStream;
 public class Demo02 {
 
 	public static void main(String[] args) throws Exception {
-		File file=new File("c://javaæµ‹è¯•ç›®å½•//javaæµ‹è¯•æ–‡ä»¶.properties");
+		File file=new File("c://java²âÊÔÄ¿Â¼//java²âÊÔÎÄ¼ş.properties");
 		InputStream inputStream=new FileInputStream(file);
 		int fileLength=(int) file.length();
 		byte b[]=new byte[fileLength];
 		inputStream.read(b);
 		inputStream.close();
-		System.out.println("è¯»å–åˆ°çš„å†…å®¹ï¼š"+new String(b));
+		System.out.println("¶ÁÈ¡µ½µÄÄÚÈİ£º"+new String(b));
 	}
 }

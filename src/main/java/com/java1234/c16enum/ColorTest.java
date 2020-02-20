@@ -3,28 +3,28 @@ package com.java1234.c16enum;
 /**
  * @author gaoxu
  * @date 2019-07-12 10:57
- * @description ... ç±»
+ * @description ... Àà
  */
 public class ColorTest {
 
     public static void main(String[] args) {
-        //æšä¸¾ç±»çš„åŸºæœ¬æ“ä½œ
+        //Ã¶¾ÙÀàµÄ»ù±¾²Ù×÷
         System.out.println("Color.GREEN=" + Color.GREEN);
         System.out.println("Color.GREEN.toString()=" + Color.GREEN.toString());
-        System.out.println("Color.values()ï¼šéå†æšä¸¾ç±»Colorçš„æ¯ä¸€é¡¹ã€‚");
+        System.out.println("Color.values()£º±éÀúÃ¶¾ÙÀàColorµÄÃ¿Ò»Ïî¡£");
         for (Color color : Color.values()) {
-            System.out.println(color.toString() + "ï¼Œ" + color.getStateNum());
+            System.out.println(color.toString() + "£¬" + color.getStateNum());
         }
-        System.out.println("Coloråœ¨switch (Color.GREEN)ä¸­çš„åº”ç”¨");
+        System.out.println("ColorÔÚswitch (Color.GREEN)ÖĞµÄÓ¦ÓÃ");
         switch (Color.GREEN) {
             case GREEN:
-                System.out.println("é¢œè‰²æ˜¯ç»¿è‰²~");
+                System.out.println("ÑÕÉ«ÊÇÂÌÉ«~");
                 break;
             case RED:
-                System.out.println("é¢œè‰²æ˜¯çº¢è‰²~");
+                System.out.println("ÑÕÉ«ÊÇºìÉ«~");
                 break;
             default:
-                System.out.println("é¢œè‰²æ˜¯é»„è‰²~");
+                System.out.println("ÑÕÉ«ÊÇ»ÆÉ«~");
                 break;
         }
     }

@@ -3,7 +3,7 @@ package com.java1234.c09thread.c04method;
 /**
  * @author gaoxu
  * @date 2019-05-30 18:27
- * @description ... Á±ª
+ * @description ... ¿‡
  */
 public class App implements Runnable {
     @Override
@@ -11,31 +11,31 @@ public class App implements Runnable {
         // TODO Auto-generated method stub
         for (int i = 0; i < 10; i++) {
             Thread thread = Thread.currentThread();
-            System.out.println(thread.getName() + "Ôºö" + i);
+            System.out.println(thread.getName() + "£∫" + i);
         }
     }
 
     public static void main(String[] args) {
-        //ÊûÑÈÄ†ÊñπÊ≥ï ÂèØ‰ª•‰∏∫Á∫øÁ®ãÂèñÂêçÂ≠óÔºåThread.currentThread().getName() ‰ΩøÁî®
+        //ππ‘Ï∑Ω∑® ø…“‘Œ™œﬂ≥Ã»°√˚◊÷£¨Thread.currentThread().getName()  π”√
         App app1 = new App();
         new Thread(app1).start();
-        new Thread(app1, "Ëá™Â∑±ÂÆö‰πâÁ∫øÁ®ãÂêçÂ≠ó").start();
-        //ÊòØÂê¶Ê≠£Âú®ËøêË°å
-        System.out.println("t1ÊòØÂê¶Ê¥ªÂä®Ôºö" + new Thread(app1).isAlive());
-        //ËÆæÁΩÆÁ∫øÁ®ã‰ºòÂÖàÁ∫ß
+        new Thread(app1, "◊‘º∫∂®“Âœﬂ≥Ã√˚◊÷").start();
+        // «∑Ò’˝‘⁄‘À––
+        System.out.println("t1 «∑ÒªÓ∂Ø£∫" + new Thread(app1).isAlive());
+        //…Ë÷√œﬂ≥Ã”≈œ»º∂
         App app2 = new App();
-        Thread t1 = new Thread(app2, "Á∫øÁ®ãA");
-        Thread t2 = new Thread(app2, "Á∫øÁ®ãB");
-        Thread t3 = new Thread(app2, "Á∫øÁ®ãC");
+        Thread t1 = new Thread(app2, "œﬂ≥ÃA");
+        Thread t2 = new Thread(app2, "œﬂ≥ÃB");
+        Thread t3 = new Thread(app2, "œﬂ≥ÃC");
         t1.setPriority(Thread.MAX_PRIORITY);
         t2.setPriority(Thread.MIN_PRIORITY);
         t3.setPriority(Thread.NORM_PRIORITY);
         t1.start();
         t2.start();
         t3.start();
-        //ÂæóÂà∞ÂΩìÂâçÊ≠£Âú®ËøêË°åÁöÑÁ∫øÁ®ã
+        //µ√µΩµ±«∞’˝‘⁄‘À––µƒœﬂ≥Ã
         Thread thread = Thread.currentThread();
-        //ÂΩìÂâçÊâßË°åÁöÑÁ∫øÁ®ãÁ§ºËÆ©ÔºåËøõÂÖ•Á≠âÂæÖÈòüÂàóÔºåÁ≠âÂæÖ‰∏ã‰∏Ä‰∏™Êó∂Èó¥Áâá
+        //µ±«∞÷¥––µƒœﬂ≥Ã¿Ò»√£¨Ω¯»Îµ»¥˝∂”¡–£¨µ»¥˝œ¬“ª∏ˆ ±º‰∆¨
         Thread.yield();
     }
 }

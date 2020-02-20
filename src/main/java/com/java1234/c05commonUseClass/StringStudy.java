@@ -3,66 +3,66 @@ package com.java1234.c05commonUseClass;
 public class StringStudy {
     public static void main(String[] args) {
         /**
-         * String çš„ å†…å®¹æ”¾åœ¨äº†å †åŒºä¸­ï¼Œå †åˆ†ä¸ºå…¬å…±å †å’Œç§æœ‰å †
+         * String µÄ ÄÚÈİ·ÅÔÚÁË¶ÑÇøÖĞ£¬¶Ñ·ÖÎª¹«¹²¶ÑºÍË½ÓĞ¶Ñ
          */
         /**
-         * å…¬å…±å †ï¼Œä¸ä½¿ç”¨newï¼Œå¯¹Stringå¯¹è±¡æ“ä½œï¼Œç­‰åŒäºé‡æ–°ç”Ÿæˆä¸€ä¸ªStringå¯¹è±¡
+         * ¹«¹²¶Ñ£¬²»Ê¹ÓÃnew£¬¶ÔString¶ÔÏó²Ù×÷£¬µÈÍ¬ÓÚÖØĞÂÉú³ÉÒ»¸öString¶ÔÏó
          */
-        String str1 = "123";    //å…¬å…±å †åŒºä¸­ åˆ›å»ºäº†123çš„ç©ºé—´
-        str1 += "abc";    //å…¬å…±å †åŒºä¸­ï¼Œä¸¢æ‰äº†123çš„ç©ºé—´ï¼Œç„¶ååˆ›å»ºäº†123abcçš„ç©ºé—´
+        String str1 = "123";    //¹«¹²¶ÑÇøÖĞ ´´½¨ÁË123µÄ¿Õ¼ä
+        str1 += "abc";    //¹«¹²¶ÑÇøÖĞ£¬¶ªµôÁË123µÄ¿Õ¼ä£¬È»ºó´´½¨ÁË123abcµÄ¿Õ¼ä
         System.out.println(str1);
 
         /**
-         * ç§æœ‰å †ï¼Œä½¿ç”¨new
+         * Ë½ÓĞ¶Ñ£¬Ê¹ÓÃnew
          */
         String str2 = new String("123");
         System.out.println(str2);
 
         /**
-         * == æ¯”è¾ƒçš„æ˜¯å¼•ç”¨
-         * equals() æ¯”è¾ƒçš„æ˜¯å…·ä½“çš„å†…å®¹
+         * == ±È½ÏµÄÊÇÒıÓÃ
+         * equals() ±È½ÏµÄÊÇ¾ßÌåµÄÄÚÈİ
          */
 
         /**
-         * String.format("å…¬å¼",""...)
+         * String.format("¹«Ê½",""...)
          */
-        //String.format("å…¬å¼",""...)ï¼šè¾“å‡ºæ ¼å¼åŒ–åçš„å­—ç¬¦ä¸²ã€‚å…¬å¼ç›®å‰å°±çŸ¥é“%sï¼šç”¨åé¢çš„å‚æ•°æ›¿æ¢%sã€‚
-        String s1 = String.format("ä½ å¥½ï¼š%sï¼Œ%sï¼", "åˆ˜å¾·å", "å¼ å­¦å‹");
+        //String.format("¹«Ê½",""...)£ºÊä³ö¸ñÊ½»¯ºóµÄ×Ö·û´®¡£¹«Ê½Ä¿Ç°¾ÍÖªµÀ%s£ºÓÃºóÃæµÄ²ÎÊıÌæ»»%s¡£
+        String s1 = String.format("ÄãºÃ£º%s£¬%s£¡", "ÁõµÂ»ª", "ÕÅÑ§ÓÑ");
         System.out.println(s1);
 
         /**
-         * str.chartAtï¼ˆint indexï¼‰
-         * è¿”å›strçš„indexä½ç½®çš„å­—ç¬¦
+         * str.chartAt£¨int index£©
+         * ·µ»ØstrµÄindexÎ»ÖÃµÄ×Ö·û
          */
 
         /**
-         * str.indexOfï¼ˆchar cï¼‰
-         * è¿”å›strçš„ä¸­ç¬¬ä¸€æ¬¡å‡ºç°å­—ç¬¦cçš„index
+         * str.indexOf£¨char c£©
+         * ·µ»ØstrµÄÖĞµÚÒ»´Î³öÏÖ×Ö·ûcµÄindex
          */
 
         /**
-         * str.indexOfï¼ˆchar cï¼Œint startIndexï¼‰
-         * è¿”å›strçš„ä¸­ä»startIndexå¼€å§‹ç¬¬ä¸€æ¬¡å‡ºç°å­—ç¬¦cçš„index
+         * str.indexOf£¨char c£¬int startIndex£©
+         * ·µ»ØstrµÄÖĞ´ÓstartIndex¿ªÊ¼µÚÒ»´Î³öÏÖ×Ö·ûcµÄindex
          */
 
         /**
-         * str.subStringï¼ˆint startIndexï¼‰
-         * è¿”å›strçš„ä¸­ä»startIndexå¼€å§‹åˆ°æœ«å°¾çš„å­—ç¬¦ä¸²
+         * str.subString£¨int startIndex£©
+         * ·µ»ØstrµÄÖĞ´ÓstartIndex¿ªÊ¼µ½Ä©Î²µÄ×Ö·û´®
          */
 
         /**
-         * str.subStringï¼ˆint startIndexï¼Œint endIndexï¼‰
-         * è¿”å›strçš„ä¸­ä»startIndexå¼€å§‹åˆ°endIndexç»“æŸçš„å­—ç¬¦ä¸²
+         * str.subString£¨int startIndex£¬int endIndex£©
+         * ·µ»ØstrµÄÖĞ´ÓstartIndex¿ªÊ¼µ½endIndex½áÊøµÄ×Ö·û´®
          */
 
         /**
-         * str.toUpperCaseï¼ˆï¼‰/str.toLowerCaseï¼ˆï¼‰
-         * è¿”å›è½¬æ¢ä¸ºå¤§å†™/å°å†™çš„str
+         * str.toUpperCase£¨£©/str.toLowerCase£¨£©
+         * ·µ»Ø×ª»»Îª´óĞ´/Ğ¡Ğ´µÄstr
          */
 
         /**
-         * str.trimï¼ˆï¼‰
-         * è¿”å›å»æ‰å‰åç©ºæ ¼çš„str
+         * str.trim£¨£©
+         * ·µ»ØÈ¥µôÇ°ºó¿Õ¸ñµÄstr
          */
     }
 }

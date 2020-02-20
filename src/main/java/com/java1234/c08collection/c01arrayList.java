@@ -6,31 +6,31 @@ import java.util.List;
 /**
  * @author gaoxu
  * @date 2019-05-31 18:24
- * @description ... ç±»
+ * @description ... Àà
  */
 public class c01arrayList {
     public static void main(String[] args) {
         List<String> arrayList = new ArrayList<String>();
-        arrayList.add("å¼ ä¸‰");
-        arrayList.add("æå››");
-        System.out.println("é›†åˆå¤§å°ï¼Œsize()");
+        arrayList.add("ÕÅÈı");
+        arrayList.add("ÀîËÄ");
+        System.out.println("¼¯ºÏ´óĞ¡£¬size()");
         for (String s : arrayList) {
             System.out.println(s);
         }
-        System.out.println("å°†æŒ‡å®šçš„å…ƒç´ æ’å…¥æ­¤åˆ—è¡¨ä¸­çš„æŒ‡å®šä½ç½®add(index,value)");
-        // å°†æŒ‡å®šçš„å…ƒç´ æ’å…¥æ­¤åˆ—è¡¨ä¸­çš„æŒ‡å®šä½ç½®ã€‚
-        arrayList.add(1, "å°å¼ ä¸‰");
+        System.out.println("½«Ö¸¶¨µÄÔªËØ²åÈë´ËÁĞ±íÖĞµÄÖ¸¶¨Î»ÖÃadd(index,value)");
+        // ½«Ö¸¶¨µÄÔªËØ²åÈë´ËÁĞ±íÖĞµÄÖ¸¶¨Î»ÖÃ¡£
+        arrayList.add(1, "Ğ¡ÕÅÈı");
         for (String s : arrayList) {
             System.out.println(s);
         }
-        System.out.println("ç”¨æŒ‡å®šçš„å…ƒç´ æ›¿ä»£æ­¤åˆ—è¡¨ä¸­æŒ‡å®šä½ç½®ä¸Šçš„å…ƒç´ ");
-        // ç”¨æŒ‡å®šçš„å…ƒç´ æ›¿ä»£æ­¤åˆ—è¡¨ä¸­æŒ‡å®šä½ç½®ä¸Šçš„å…ƒç´ ã€‚
-        arrayList.set(2, "å°æå››");
+        System.out.println("ÓÃÖ¸¶¨µÄÔªËØÌæ´ú´ËÁĞ±íÖĞÖ¸¶¨Î»ÖÃÉÏµÄÔªËØ");
+        // ÓÃÖ¸¶¨µÄÔªËØÌæ´ú´ËÁĞ±íÖĞÖ¸¶¨Î»ÖÃÉÏµÄÔªËØ¡£
+        arrayList.set(2, "Ğ¡ÀîËÄ");
         for (String s : arrayList) {
             System.out.println(s);
         }
-        System.out.println("ç§»é™¤æ­¤åˆ—è¡¨ä¸­æŒ‡å®šä½ç½®ä¸Šçš„å…ƒç´ ");
-        // ç§»é™¤æ­¤åˆ—è¡¨ä¸­æŒ‡å®šä½ç½®ä¸Šçš„å…ƒç´ ã€‚
+        System.out.println("ÒÆ³ı´ËÁĞ±íÖĞÖ¸¶¨Î»ÖÃÉÏµÄÔªËØ");
+        // ÒÆ³ı´ËÁĞ±íÖĞÖ¸¶¨Î»ÖÃÉÏµÄÔªËØ¡£
         arrayList.remove(0);
         for (String s : arrayList) {
             System.out.println(s);

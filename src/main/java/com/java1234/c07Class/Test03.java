@@ -5,10 +5,10 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * é€šè¿‡Classç±»çš„å¯¹è±¡ï¼ˆè®°å½•å¯¹è±¡çš„ç±»çš„ä¿¡æ¯ï¼‰ è·å–æ–¹æ³•å’Œå±æ€§
+ * Í¨¹ıClassÀàµÄ¶ÔÏó£¨¼ÇÂ¼¶ÔÏóµÄÀàµÄĞÅÏ¢£© »ñÈ¡·½·¨ºÍÊôĞÔ
  * <p>
- * å¸¦Declaredè¿”å›çš„æ˜¯å½“å‰Classå¯¹è±¡ï¼ˆç±»ï¼‰ä¸­æ˜ç¡®å£°æ˜è¿‡çš„Method/Field(åŒ…æ‹¬ï¼špublicã€protectedã€defaultã€privateï¼Œä¸åŒ…æ‹¬ï¼šçˆ¶ç±»æˆ–çˆ¶æ¥å£çš„Method/Field)
- * ä¸å¸¦Declaredçš„è¿”å›çš„æ˜¯å½“å‰Classå¯¹è±¡ï¼ˆç±»ï¼‰çš„å®ä¾‹èƒ½è°ƒç”¨çš„æ‰€æœ‰public Method/Fieldï¼ˆåŒ…å«ä»çˆ¶ç±»æˆ–çˆ¶æ¥å£ç»§æ‰¿è€Œæ¥æ²¡æœ‰é‡å†™çš„public Method/Fieldï¼‰
+ * ´øDeclared·µ»ØµÄÊÇµ±Ç°Class¶ÔÏó£¨Àà£©ÖĞÃ÷È·ÉùÃ÷¹ıµÄMethod/Field(°üÀ¨£ºpublic¡¢protected¡¢default¡¢private£¬²»°üÀ¨£º¸¸Àà»ò¸¸½Ó¿ÚµÄMethod/Field)
+ * ²»´øDeclaredµÄ·µ»ØµÄÊÇµ±Ç°Class¶ÔÏó£¨Àà£©µÄÊµÀıÄÜµ÷ÓÃµÄËùÓĞpublic Method/Field£¨°üº¬´Ó¸¸Àà»ò¸¸½Ó¿Ú¼Ì³Ğ¶øÀ´Ã»ÓĞÖØĞ´µÄpublic Method/Field£©
  */
 public class Test03 {
 
@@ -16,40 +16,40 @@ public class Test03 {
         try {
             Class<?> c = Class.forName("com.java1234.c07Class.Student");
             /**
-             * å¸¦Declaredè¿”å›çš„æ˜¯å½“å‰ç±»å£°æ˜çš„æ‰€æœ‰(åŒ…æ‹¬ï¼špublic,protected,default,private)Method/Field,ä½†ä¸åŒ…æ‹¬çˆ¶ç±»æˆ–çˆ¶æ¥å£çš„Method/Field
+             * ´øDeclared·µ»ØµÄÊÇµ±Ç°ÀàÉùÃ÷µÄËùÓĞ(°üÀ¨£ºpublic,protected,default,private)Method/Field,µ«²»°üÀ¨¸¸Àà»ò¸¸½Ó¿ÚµÄMethod/Field
              */
             Constructor<?> declaredCons[] = c.getDeclaredConstructors();
             for (Constructor<?> con : declaredCons) {
-                System.out.println("æ„é€ æ–¹æ³•ï¼š" + con);
+                System.out.println("¹¹Ôì·½·¨£º" + con);
             }
 
             Method declaredMds[] = c.getDeclaredMethods();
             for (Method m : declaredMds) {
-                System.out.println("éæ„é€ æ–¹æ³•" + m);
+                System.out.println("·Ç¹¹Ôì·½·¨" + m);
             }
 
             Field declaredFs[] = c.getDeclaredFields();
             for (Field f : declaredFs) {
-                System.out.println("å±æ€§" + f);
+                System.out.println("ÊôĞÔ" + f);
             }
             /**
-             * ä¸å¸¦Declaredè¿”å›çš„æ˜¯å½“å‰Classå¯¹è±¡çš„æ‰€æœ‰public Method/Field,åŒ…æ‹¬çˆ¶ç±»æˆ–çˆ¶æ¥å£çš„public Method/Field
+             * ²»´øDeclared·µ»ØµÄÊÇµ±Ç°Class¶ÔÏóµÄËùÓĞpublic Method/Field,°üÀ¨¸¸Àà»ò¸¸½Ó¿ÚµÄpublic Method/Field
              */
-            System.out.println("ä¸å¸¦Declared");
+            System.out.println("²»´øDeclared");
 
             Constructor<?> cons[] = c.getConstructors();
             for (Constructor<?> con : cons) {
-                System.out.println("æ„é€ æ–¹æ³•ï¼š" + con);
+                System.out.println("¹¹Ôì·½·¨£º" + con);
             }
 
             Method mds[] = c.getMethods();
             for (Method m : mds) {
-                System.out.println("éæ„é€ æ–¹æ³•" + m);
+                System.out.println("·Ç¹¹Ôì·½·¨" + m);
             }
 
             Field fs[] = c.getFields();
             for (Field f : fs) {
-                System.out.println("å±æ€§" + f);
+                System.out.println("ÊôĞÔ" + f);
             }
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block

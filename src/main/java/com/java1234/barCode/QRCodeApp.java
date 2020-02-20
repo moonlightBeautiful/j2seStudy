@@ -21,12 +21,12 @@ import java.util.Map;
 public class QRCodeApp {
 
     /**
-     * äºŒç»´ç BufferedImageå¯¹è±¡ç”Ÿæˆæ–¹æ³•
+     * ¶şÎ¬ÂëBufferedImage¶ÔÏóÉú³É·½·¨
      *
-     * @param contents äºŒç»´ç å†…å®¹
-     * @param width    äºŒç»´ç å›¾ç‰‡å®½åº¦
-     * @param height   äºŒç»´ç å›¾ç‰‡é«˜åº¦
-     * @param margin   äºŒç»´ç è¾¹æ¡†(0,2,4,8)
+     * @param contents ¶şÎ¬ÂëÄÚÈİ
+     * @param width    ¶şÎ¬ÂëÍ¼Æ¬¿í¶È
+     * @param height   ¶şÎ¬ÂëÍ¼Æ¬¸ß¶È
+     * @param margin   ¶şÎ¬Âë±ß¿ò(0,2,4,8)
      * @throws Exception
      * @author LinWenLi
      * @date 2018-08-23 12:51:00
@@ -34,38 +34,38 @@ public class QRCodeApp {
      */
     public static BufferedImage createQRCode(String contents, int width, int height, int margin) throws Exception {
         if (contents == null || contents.equals("")) {
-            throw new Exception("contentsä¸èƒ½ä¸ºç©ºã€‚");
+            throw new Exception("contents²»ÄÜÎª¿Õ¡£");
         }
-        // äºŒç»´ç åŸºæœ¬å‚æ•°è®¾ç½®
+        // ¶şÎ¬Âë»ù±¾²ÎÊıÉèÖÃ
         Map<EncodeHintType, Object> hints = new HashMap<>();
-        hints.put(EncodeHintType.CHARACTER_SET, CharacterSetECI.UTF8);// è®¾ç½®ç¼–ç å­—ç¬¦é›†utf-8
-        hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);// è®¾ç½®çº é”™ç­‰çº§L/M/Q/H,å½“äºŒç»´ç è¢«æŸæ¯ä¸€éƒ¨åˆ†æ—¶ï¼Œçº é”™ç­‰çº§è¶Šé«˜ï¼Œè¶Šå¯èƒ½è¯»å–æˆåŠŸï¼›åŒæ ·çš„ï¼Œçº é”™ç­‰çº§è¶Šé«˜ï¼Œå•ä½é¢ç§¯å†…ç‚¹é˜µçš„ç‚¹è¶Šå¤šï¼Œæœºå™¨æ‰«ææ—¶ï¼Œè¯†åˆ«æ‰€éœ€æ—¶é—´è¶Šé•¿ï¼Œå½“å‰è®¾ç½®ç­‰çº§ä¸ºæœ€é«˜ç­‰çº§H
-        hints.put(EncodeHintType.MARGIN, margin);// å¯è®¾ç½®èŒƒå›´ä¸º0-10ï¼Œä½†ä»…å››ä¸ªå˜åŒ–0 1(2) 3(4 5 6) 7(8 9 10)
-        // ç”Ÿæˆå›¾ç‰‡ç±»å‹ä¸ºQRCode
+        hints.put(EncodeHintType.CHARACTER_SET, CharacterSetECI.UTF8);// ÉèÖÃ±àÂë×Ö·û¼¯utf-8
+        hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);// ÉèÖÃ¾À´íµÈ¼¶L/M/Q/H,µ±¶şÎ¬Âë±»Ëğ»ÙÒ»²¿·ÖÊ±£¬¾À´íµÈ¼¶Ô½¸ß£¬Ô½¿ÉÄÜ¶ÁÈ¡³É¹¦£»Í¬ÑùµÄ£¬¾À´íµÈ¼¶Ô½¸ß£¬µ¥Î»Ãæ»ıÄÚµãÕóµÄµãÔ½¶à£¬»úÆ÷É¨ÃèÊ±£¬Ê¶±ğËùĞèÊ±¼äÔ½³¤£¬µ±Ç°ÉèÖÃµÈ¼¶Îª×î¸ßµÈ¼¶H
+        hints.put(EncodeHintType.MARGIN, margin);// ¿ÉÉèÖÃ·¶Î§Îª0-10£¬µ«½öËÄ¸ö±ä»¯0 1(2) 3(4 5 6) 7(8 9 10)
+        // Éú³ÉÍ¼Æ¬ÀàĞÍÎªQRCode
         BarcodeFormat format = BarcodeFormat.QR_CODE;
-        // åˆ›å»ºä½çŸ©é˜µå¯¹è±¡
+        // ´´½¨Î»¾ØÕó¶ÔÏó
         BitMatrix matrix = null;
         try {
-            // ç”ŸæˆäºŒç»´ç å¯¹åº”çš„ä½çŸ©é˜µå¯¹è±¡
+            // Éú³É¶şÎ¬Âë¶ÔÓ¦µÄÎ»¾ØÕó¶ÔÏó
             matrix = new MultiFormatWriter().encode(contents, format, width, height, hints);
         } catch (WriterException e) {
             e.printStackTrace();
         }
-        // è®¾ç½®ä½çŸ©é˜µè½¬å›¾ç‰‡çš„å‚æ•°
+        // ÉèÖÃÎ»¾ØÕó×ªÍ¼Æ¬µÄ²ÎÊı
         MatrixToImageConfig config = new MatrixToImageConfig(Color.black.getRGB(), Color.white.getRGB());
-        // ä½çŸ©é˜µå¯¹è±¡è½¬BufferedImageå¯¹è±¡
+        // Î»¾ØÕó¶ÔÏó×ªBufferedImage¶ÔÏó
         BufferedImage qrcode = MatrixToImageWriter.toBufferedImage(matrix, config);
         return qrcode;
     }
 
     /**
-     * äºŒç»´ç æ·»åŠ LOGO
+     * ¶şÎ¬ÂëÌí¼ÓLOGO
      *
      * @param qrcode
-     * @param width            äºŒç»´ç å›¾ç‰‡å®½åº¦
-     * @param height           äºŒç»´ç å›¾ç‰‡é«˜åº¦
-     * @param logoPath         å›¾æ ‡LOGOè·¯å¾„
-     * @param logoSizeMultiple äºŒç»´ç ä¸LOGOçš„å¤§å°æ¯”ä¾‹
+     * @param width            ¶şÎ¬ÂëÍ¼Æ¬¿í¶È
+     * @param height           ¶şÎ¬ÂëÍ¼Æ¬¸ß¶È
+     * @param logoPath         Í¼±êLOGOÂ·¾¶
+     * @param logoSizeMultiple ¶şÎ¬ÂëÓëLOGOµÄ´óĞ¡±ÈÀı
      * @throws Exception
      * @author LinWenLi
      * @date 2018-08-23 13:17:07
@@ -74,26 +74,26 @@ public class QRCodeApp {
     public static BufferedImage createQRCodeWithLogo(BufferedImage qrcode, int width, int height, String logoPath, int logoSizeMultiple) throws Exception {
         File logoFile = new File(logoPath);
         if (!logoFile.exists() && !logoFile.isFile()) {
-            throw new Exception("æŒ‡å®šçš„LOGOå›¾ç‰‡è·¯å¾„ä¸å­˜åœ¨ï¼");
+            throw new Exception("Ö¸¶¨µÄLOGOÍ¼Æ¬Â·¾¶²»´æÔÚ£¡");
         }
         try {
-            // è¯»å–LOGO
+            // ¶ÁÈ¡LOGO
             BufferedImage logo = ImageIO.read(logoFile);
-            // è®¾ç½®LOGOå®½é«˜
+            // ÉèÖÃLOGO¿í¸ß
             int logoHeight = qrcode.getHeight() / logoSizeMultiple;
             int logowidth = qrcode.getWidth() / logoSizeMultiple;
-            // è®¾ç½®æ”¾ç½®LOGOçš„äºŒç»´ç å›¾ç‰‡èµ·å§‹ä½ç½®
+            // ÉèÖÃ·ÅÖÃLOGOµÄ¶şÎ¬ÂëÍ¼Æ¬ÆğÊ¼Î»ÖÃ
             int x = (qrcode.getWidth() - logowidth) / 2;
             int y = (qrcode.getHeight() - logoHeight) / 2;
-            // æ–°å»ºç©ºç”»æ¿
+            // ĞÂ½¨¿Õ»­°å
             BufferedImage combined = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-            // æ–°å»ºç”»ç¬”
+            // ĞÂ½¨»­±Ê
             Graphics2D g = (Graphics2D) combined.getGraphics();
-            // å°†äºŒç»´ç ç»˜åˆ¶åˆ°ç”»æ¿
+            // ½«¶şÎ¬Âë»æÖÆµ½»­°å
             g.drawImage(qrcode, 0, 0, null);
-            // è®¾ç½®ä¸é€æ˜åº¦ï¼Œå®Œå…¨ä¸é€æ˜1f,å¯è®¾ç½®èŒƒå›´0.0f-1.0f
+            // ÉèÖÃ²»Í¸Ã÷¶È£¬ÍêÈ«²»Í¸Ã÷1f,¿ÉÉèÖÃ·¶Î§0.0f-1.0f
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1.0f));
-            // ç»˜åˆ¶LOGO
+            // »æÖÆLOGO
             g.drawImage(logo, x, y, logowidth, logoHeight, null);
             return combined;
         } catch (Exception e) {
@@ -102,31 +102,31 @@ public class QRCodeApp {
     }
 
     /**
-     * å¯¼å‡ºåˆ°æŒ‡å®šè·¯å¾„
+     * µ¼³öµ½Ö¸¶¨Â·¾¶
      *
      * @param bufferedImage
-     * @param filePath      å›¾ç‰‡ä¿å­˜è·¯å¾„
-     * @param fileName      å›¾ç‰‡æ–‡ä»¶å
-     * @param formatName    å›¾ç‰‡æ ¼å¼
+     * @param filePath      Í¼Æ¬±£´æÂ·¾¶
+     * @param fileName      Í¼Æ¬ÎÄ¼şÃû
+     * @param formatName    Í¼Æ¬¸ñÊ½
      * @author LinWenLi
      * @date 2018-08-23 12:59:03
      * @return: boolean
      */
     public static boolean generateQRCodeToPath(BufferedImage bufferedImage, String filePath, String fileName, String formatName) {
-        // åˆ¤æ–­è·¯å¾„æ˜¯å¦å­˜åœ¨ï¼Œä¸å­˜åœ¨åˆ™åˆ›å»º
+        // ÅĞ¶ÏÂ·¾¶ÊÇ·ñ´æÔÚ£¬²»´æÔÚÔò´´½¨
         File path = new File(filePath);
         if (!path.exists()) {
             path.mkdirs();
         }
-        // è·¯å¾„åè¡¥å……æ–œæ 
+        // Â·¾¶ºó²¹³äĞ±¸Ü
         if (filePath.lastIndexOf("\\") != filePath.length() - 1) {
             filePath = filePath + "\\";
         }
-        // ç»„åˆä¸ºå›¾ç‰‡ç”Ÿæˆçš„å…¨è·¯å¾„
+        // ×éºÏÎªÍ¼Æ¬Éú³ÉµÄÈ«Â·¾¶
         String fileFullPath = filePath + fileName + "." + formatName;
         boolean result = false;
         try {
-            // è¾“å‡ºå›¾ç‰‡æ–‡ä»¶åˆ°æŒ‡å®šä½ç½®
+            // Êä³öÍ¼Æ¬ÎÄ¼şµ½Ö¸¶¨Î»ÖÃ
             result = ImageIO.write(bufferedImage, formatName, new File(fileFullPath));
         } catch (IOException e) {
             e.printStackTrace();

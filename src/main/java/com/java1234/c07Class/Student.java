@@ -43,15 +43,15 @@ public class Student extends People {
     }
 
     public static void say() {
-        System.out.println("è¯´ä½ å¥½");
+        System.out.println("ËµÄãºÃ");
     }
 
     private void eat() {
-        System.out.println("åƒé¦’å¤´");
+        System.out.println("³ÔÂøÍ·");
     }
 
     @Override
     public void run() {
-        System.out.println("å­è·‘");
+        System.out.println("×ÓÅÜ");
     }
 }

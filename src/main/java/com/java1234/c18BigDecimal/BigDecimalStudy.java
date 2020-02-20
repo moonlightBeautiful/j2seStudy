@@ -5,80 +5,80 @@ import java.math.BigDecimal;
 /**
  * @author gaoxu
  * @date 2019-09-17 17:19
- * @description BigDecimal ç±»
+ * @description BigDecimal Àà
  */
 public class BigDecimalStudy {
     public static void main(String[] args) {
         /**
-         * Javaä¸­æä¾›äº†å¤§æ•°å­—(è¶…è¿‡16ä½æœ‰æ•ˆä½)çš„æ“ä½œç±»,å³ java.math.BinInteger ç±»å’Œ java.math.BigDecimal ç±»,ç”¨äºé«˜ç²¾åº¦è®¡ç®—.
-         * å…¶ä¸­ BigInteger ç±»æ˜¯é’ˆå¯¹å¤§æ•´æ•°çš„å¤„ç†ç±»,è€Œ BigDecimal ç±»åˆ™æ˜¯é’ˆå¯¹å¤§å°æ•°çš„å¤„ç†ç±».
-         * floatå’ŒDoubleåªèƒ½ç”¨æ¥åšç§‘å­¦è®¡ç®—æˆ–è€…æ˜¯å·¥ç¨‹è®¡ç®—;
-         * åœ¨å•†ä¸šè®¡ç®—ä¸­,å¯¹æ•°å­—ç²¾åº¦è¦æ±‚è¾ƒé«˜,å¿…é¡»ä½¿ç”¨ BigInteger ç±»å’Œ BigDecimal ç±»,å®ƒæ”¯æŒä»»ä½•ç²¾åº¦çš„å®šç‚¹æ•°,å¯ä»¥ç”¨å®ƒæ¥ç²¾ç¡®è®¡ç®—è´§å¸å€¼.
+         * JavaÖĞÌá¹©ÁË´óÊı×Ö(³¬¹ı16Î»ÓĞĞ§Î»)µÄ²Ù×÷Àà,¼´ java.math.BinInteger ÀàºÍ java.math.BigDecimal Àà,ÓÃÓÚ¸ß¾«¶È¼ÆËã.
+         * ÆäÖĞ BigInteger ÀàÊÇÕë¶Ô´óÕûÊıµÄ´¦ÀíÀà,¶ø BigDecimal ÀàÔòÊÇÕë¶Ô´óĞ¡ÊıµÄ´¦ÀíÀà.
+         * floatºÍDoubleÖ»ÄÜÓÃÀ´×ö¿ÆÑ§¼ÆËã»òÕßÊÇ¹¤³Ì¼ÆËã;
+         * ÔÚÉÌÒµ¼ÆËãÖĞ,¶ÔÊı×Ö¾«¶ÈÒªÇó½Ï¸ß,±ØĞëÊ¹ÓÃ BigInteger ÀàºÍ BigDecimal Àà,ËüÖ§³ÖÈÎºÎ¾«¶ÈµÄ¶¨µãÊı,¿ÉÒÔÓÃËüÀ´¾«È·¼ÆËã»õ±ÒÖµ.
          *
          */
         /**
-         *  BigDecimal(double d); //æ­¤ç§æ–¹å¼ç»å¯¹ä¸å…è®¸!!!!!è™½ç„¶ä¸æŠ¥é”™ï¼Œä½†æ˜¯ç²¾åº¦ä¼šä¸¢å¤±ï¼Œå¦‚æœéè¦æŠŠdoubleè½¬æˆBigDecimalï¼Œåˆ™å¦‚ä¸‹ä½¿ç”¨
+         *  BigDecimal(double d); //´ËÖÖ·½Ê½¾ø¶Ô²»ÔÊĞí!!!!!ËäÈ»²»±¨´í£¬µ«ÊÇ¾«¶È»á¶ªÊ§£¬Èç¹û·ÇÒª°Ñdouble×ª³ÉBigDecimal£¬ÔòÈçÏÂÊ¹ÓÃ
          *      BigDecimal.valueOf(2.3 double);
          *      new BigDecimal(Double.toString(2.3));
-         *  new BigDecimal(String s);   //å¸¸ç”¨,æ¨èä½¿ç”¨
-         *  BigDecimal.valueOf(double d);     //å¸¸ç”¨,æ¨èä½¿ç”¨
+         *  new BigDecimal(String s);   //³£ÓÃ,ÍÆ¼öÊ¹ÓÃ
+         *  BigDecimal.valueOf(double d);     //³£ÓÃ,ÍÆ¼öÊ¹ÓÃ
          */
 
 
         double d1 = 0.2;
         double d2 = 0.1;
 
-        //ä¸ºä»€ä¹ˆä¸èƒ½ä½¿ç”¨doubleè¿›è¡Œè¿ç®—ï¼Œç²¾åº¦å¯èƒ½ä¼šä¸¢å¤±!!!!
-        System.out.println("ä¸ºä»€ä¹ˆä¸èƒ½ä½¿ç”¨doubleï¼Œå› ä¸ºdoubleé—´çš„è¿ç®—å¯èƒ½ä¼šå‡ºé”™ã€‚");
+        //ÎªÊ²Ã´²»ÄÜÊ¹ÓÃdouble½øĞĞÔËËã£¬¾«¶È¿ÉÄÜ»á¶ªÊ§!!!!
+        System.out.println("ÎªÊ²Ã´²»ÄÜÊ¹ÓÃdouble£¬ÒòÎªdouble¼äµÄÔËËã¿ÉÄÜ»á³ö´í¡£");
         System.out.println(d1 + " + " + d2 + " = " + (0.2 + 0.1));
         System.out.println(d1 + " - " + d2 + " = " + (0.3 - 0.1));
         System.out.println(d1 + " * " + d2 + " = " + (0.2 * 0.1));
         System.out.println(d1 + " / " + d2 + " = " + (0.3 / 0.1));
         System.out.println("");
 
-        //BigDecimalçš„å®ä¾‹åŒ–
-        //new BigDecimal(double)æ­¤ç§æ–¹å¼ç»å¯¹ä¸å…è®¸ï¼Œç²¾åº¦ä¼šä¸¢å¤±!!!!!
-        System.out.println("BigDecimalçš„å®ä¾‹åŒ–æ–¹å¼ä¸€");
-        System.out.println("new BigDecimal(double)ï¼Œç²¾åº¦ä¼šä¸¢å¤±!!!!!");
+        //BigDecimalµÄÊµÀı»¯
+        //new BigDecimal(double)´ËÖÖ·½Ê½¾ø¶Ô²»ÔÊĞí£¬¾«¶È»á¶ªÊ§!!!!!
+        System.out.println("BigDecimalµÄÊµÀı»¯·½Ê½Ò»");
+        System.out.println("new BigDecimal(double)£¬¾«¶È»á¶ªÊ§!!!!!");
         System.out.println("new BigDecimal(" + d1 + ") = " + new BigDecimal(d1));
         System.out.println("new BigDecimal(" + d2 + ") = " + new BigDecimal(d2));
-        System.out.println("new BigDecimal(double)ï¼Œè§£å†³ç²¾åº¦ä¼šä¸¢å¤±!!!!!BigDecimal.valueOf(double);");
+        System.out.println("new BigDecimal(double)£¬½â¾ö¾«¶È»á¶ªÊ§!!!!!BigDecimal.valueOf(double);");
         System.out.println("BigDecimal.valueOf(" + d2 + ") = " + BigDecimal.valueOf(d2));
-        System.out.println("new BigDecimal(double)ï¼Œè§£å†³ç²¾åº¦ä¼šä¸¢å¤±!!!!!new BigDecimal(Double.toString(double));");
+        System.out.println("new BigDecimal(double)£¬½â¾ö¾«¶È»á¶ªÊ§!!!!!new BigDecimal(Double.toString(double));");
         System.out.println("new BigDecimal(Double.toString(" + d2 + ") = " + new BigDecimal(Double.toString(d2)));
         System.out.println("");
 
-        System.out.println("BigDecimalçš„å®ä¾‹åŒ–æ–¹å¼äºŒ");
+        System.out.println("BigDecimalµÄÊµÀı»¯·½Ê½¶ş");
         System.out.println("new BigDecimal(String.valueOf(" + d1 + "))=" + new BigDecimal(String.valueOf(d1)));
         System.out.println("new BigDecimal(String.valueOf(" + d2 + "))=" + new BigDecimal(String.valueOf(d2)));
         System.out.println("");
 
-        System.out.println("BigDecimalçš„å®ä¾‹åŒ–1å’Œ1.00000çš„æ¯”è¾ƒ");
+        System.out.println("BigDecimalµÄÊµÀı»¯1ºÍ1.00000µÄ±È½Ï");
         BigDecimal b1 = BigDecimal.valueOf(1);
         BigDecimal b2 = BigDecimal.valueOf(1.00000);
         System.out.println(b1.equals(b2));
         System.out.println(b1.compareTo(b2));
 
         /**
-         * setScaleæ–¹æ³•ç”¨äºæ ¼å¼åŒ–å°æ•°ç‚¹ï¼Œé»˜è®¤æ–¹å¼æ˜¯å››èˆäº”å…¥
+         * setScale·½·¨ÓÃÓÚ¸ñÊ½»¯Ğ¡Êıµã£¬Ä¬ÈÏ·½Ê½ÊÇËÄÉáÎåÈë
          */
         BigDecimal decimal = new BigDecimal("1.123455");
         System.out.println(decimal);
-        //ROUND_DOWNç›´æ¥åˆ é™¤å¤šä½™çš„å°æ•°ä½
+        //ROUND_DOWNÖ±½ÓÉ¾³ı¶àÓàµÄĞ¡ÊıÎ»
         BigDecimal setScale1 = decimal.setScale(4, BigDecimal.ROUND_DOWN);
         System.out.println(setScale1);
-        //ROUND_UPè¿›ä½
+        //ROUND_UP½øÎ»
         BigDecimal setScale2 = decimal.setScale(3, BigDecimal.ROUND_UP);
         System.out.println(setScale2);
-        //ROUND_HALF_UPå››èˆäº”å…¥
+        //ROUND_HALF_UPËÄÉáÎåÈë
         BigDecimal setScale3 = decimal.setScale(4, BigDecimal.ROUND_HALF_UP);
         System.out.println(setScale3);
-        //ROUND_HALF_UPäº”èˆå…­å…¥
+        //ROUND_HALF_UPÎåÉáÁùÈë
         BigDecimal setScale4 = decimal.setScale(5, BigDecimal.ROUND_HALF_DOWN);
         System.out.println(setScale4);
 
         /*
-            BigDecimalçš„åŠ å‡ä¹˜é™¤
+            BigDecimalµÄ¼Ó¼õ³Ë³ı
          */
         BigDecimal a = new BigDecimal("4.50");
         BigDecimal b = new BigDecimal("1.5");

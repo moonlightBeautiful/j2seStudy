@@ -3,31 +3,31 @@ package com.java1234.c03objectOrientedProgramming;
 public class CodeBlockTest3 {
 
     /**
-     * é™æ€æ„é€ ä»£ç å—ï¼Œä»…åœ¨ç±»åŠ è½½çš„æ—¶å€™åˆå§‹åŒ–ä¸€æ¬¡
+     * ¾²Ì¬¹¹Ôì´úÂë¿é£¬½öÔÚÀà¼ÓÔØµÄÊ±ºò³õÊ¼»¯Ò»´Î
      */
     static {
-        System.out.println("é™æ€æ„é€ ä»£ç å—ï¼Œä»…åœ¨ç±»åŠ è½½çš„æ—¶å€™åˆå§‹åŒ–ä¸€æ¬¡");
+        System.out.println("¾²Ì¬¹¹Ôì´úÂë¿é£¬½öÔÚÀà¼ÓÔØµÄÊ±ºò³õÊ¼»¯Ò»´Î");
     }
 
     /**
-     * æ„é€ æ–¹æ³•1
+     * ¹¹Ôì·½·¨1
      */
     public CodeBlockTest3() {
-        System.out.println("æ„é€ æ–¹æ³•1");
+        System.out.println("¹¹Ôì·½·¨1");
     }
 
     /**
-     * æ„é€ æ–¹æ³•2
+     * ¹¹Ôì·½·¨2
      */
     public CodeBlockTest3(int i) {
-        System.out.println("æ„é€ æ–¹æ³•2");
+        System.out.println("¹¹Ôì·½·¨2");
     }
 
     /**
-     * æ„é€ æ–¹æ³•3
+     * ¹¹Ôì·½·¨3
      */
     public CodeBlockTest3(int i, int j) {
-        System.out.println("æ„é€ æ–¹æ³•3");
+        System.out.println("¹¹Ôì·½·¨3");
     }
 
     public static void main(String[] args) {

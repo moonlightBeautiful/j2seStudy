@@ -6,60 +6,60 @@ import java.util.Map;
 /**
  * @author gaoxu
  * @date 2019-06-03 09:02
- * @description ... ç±»
+ * @description ... Àà
  */
 public class c04HashMap {
     public static void main(String[] args) {
         HashMap<String, Student> hashMap = new HashMap<String, Student>();
-        hashMap.put("1å·", new Student("å¼ ä¸‰", 10));
-        hashMap.put("2å·", new Student("æå››", 11));
-        hashMap.put("3å·", new Student("ç‹äº”", 12));
+        hashMap.put("1ºÅ", new Student("ÕÅÈı", 10));
+        hashMap.put("2ºÅ", new Student("ÀîËÄ", 11));
+        hashMap.put("3ºÅ", new Student("ÍõÎå", 12));
 
-        /*Student s = hashMap.get("1å·");
+        /*Student s = hashMap.get("1ºÅ");
         System.out.println(s);
-        // è·å–keyçš„è¿­ä»£å™¨
+        // »ñÈ¡keyµÄµü´úÆ÷
         Iterator<String> it = hashMap.keySet().iterator();
         while (it.hasNext()) {
-            String key = it.next(); // è·å–key
-            Student student = hashMap.get(key); // è·å–å€¼
+            String key = it.next(); // »ñÈ¡key
+            Student student = hashMap.get(key); // »ñÈ¡Öµ
             System.out.println("key=" + key + ",value=" + student);
         }*/
 
-        //Mapçš„æ˜ å°„é¡¹Entryå­¦ä¹ 
+        //MapµÄÓ³ÉäÏîEntryÑ§Ï°
         /**
-         * Mapä¸­é‡‡ç”¨Entryå†…éƒ¨ç±»æ¥è¡¨ç¤ºä¸€ä¸ªæ˜ å°„é¡¹ï¼Œæ˜ å°„é¡¹åŒ…å«Keyå’ŒValue (æˆ‘ä»¬æ€»è¯´é”®å€¼å¯¹é”®å€¼å¯¹, æ¯ä¸€ä¸ªé”®å€¼å¯¹ä¹Ÿå°±æ˜¯ä¸€ä¸ªEntry)
-         * Map.Entryé‡Œé¢åŒ…å«getKey()å’ŒgetValue()æ–¹æ³•
-         * entrySetæ˜¯ javaä¸­ é”®-å€¼ å¯¹çš„é›†åˆï¼Œä¸€èˆ¬å¯ä»¥é€šè¿‡map.entrySet()å¾—åˆ°ã€‚
-         * keySetæ˜¯ javaä¸­ é”®-å€¼ å¯¹çš„keyçš„é›†åˆï¼Œä¸€èˆ¬å¯ä»¥é€šè¿‡map.keySet()å¾—åˆ°ã€‚
+         * MapÖĞ²ÉÓÃEntryÄÚ²¿ÀàÀ´±íÊ¾Ò»¸öÓ³ÉäÏî£¬Ó³ÉäÏî°üº¬KeyºÍValue (ÎÒÃÇ×ÜËµ¼üÖµ¶Ô¼üÖµ¶Ô, Ã¿Ò»¸ö¼üÖµ¶ÔÒ²¾ÍÊÇÒ»¸öEntry)
+         * Map.EntryÀïÃæ°üº¬getKey()ºÍgetValue()·½·¨
+         * entrySetÊÇ javaÖĞ ¼ü-Öµ ¶ÔµÄ¼¯ºÏ£¬Ò»°ã¿ÉÒÔÍ¨¹ımap.entrySet()µÃµ½¡£
+         * keySetÊÇ javaÖĞ ¼ü-Öµ ¶ÔµÄkeyµÄ¼¯ºÏ£¬Ò»°ã¿ÉÒÔÍ¨¹ımap.keySet()µÃµ½¡£
          */
 
-        //å››ç§éå†Mapæ–¹å¼:
+        //ËÄÖÖ±éÀúMap·½Ê½:
         Map<String, String> map = new HashMap<String, String>();
         map.put("1", "value1");
         map.put("2", "value2");
         map.put("3", "value3");
 
-        //ç¬¬ä¸€ç§ï¼šæ™®éä½¿ç”¨ï¼Œéå†Key
-        /*System.out.println("é€šè¿‡Map.keySetéå†keyå’Œvalueï¼š");
+        //µÚÒ»ÖÖ£ºÆÕ±éÊ¹ÓÃ£¬±éÀúKey
+        /*System.out.println("Í¨¹ıMap.keySet±éÀúkeyºÍvalue£º");
         for (String key : map.keySet()) {
             System.out.println("key= "+ key + " and value= " + map.get(key));
         }*/
-        //ç¬¬äºŒç§ï¼šè¿­ä»£å™¨
-        /*System.out.println("é€šè¿‡Map.entrySetä½¿ç”¨iteratoréå†keyå’Œvalueï¼š");
+        //µÚ¶şÖÖ£ºµü´úÆ÷
+        /*System.out.println("Í¨¹ıMap.entrySetÊ¹ÓÃiterator±éÀúkeyºÍvalue£º");
         Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<String, String> entry = it.next();
             System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
         }*/
 
-        //ç¬¬ä¸‰ç§ï¼šæ¨èï¼Œå°¤å…¶æ˜¯å®¹é‡å¤§æ—¶
-        System.out.println("é€šè¿‡Map.entrySetéå†keyå’Œvalue");
+        //µÚÈıÖÖ£ºÍÆ¼ö£¬ÓÈÆäÊÇÈİÁ¿´óÊ±
+        System.out.println("Í¨¹ıMap.entrySet±éÀúkeyºÍvalue");
         for (Map.Entry<String, String> entry : map.entrySet()) {
             System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
         }
 
-        //ç¬¬å››ç§
-       /* System.out.println("é€šè¿‡Map.values()éå†æ‰€æœ‰çš„valueï¼Œä½†ä¸èƒ½éå†key");
+        //µÚËÄÖÖ
+       /* System.out.println("Í¨¹ıMap.values()±éÀúËùÓĞµÄvalue£¬µ«²»ÄÜ±éÀúkey");
         for (String v : map.values()) {
             System.out.println("value= " + v);
         }*/
