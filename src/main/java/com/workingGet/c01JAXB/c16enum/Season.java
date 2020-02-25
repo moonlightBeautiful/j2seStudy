@@ -1,4 +1,4 @@
-package com.java1234.c16enum;
+package com.workingGet.c01JAXB.c16enum;
 
 /**
  * @author gaoxu

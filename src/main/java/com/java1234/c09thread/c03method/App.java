@@ -1,4 +1,4 @@
-package com.java1234.c09thread.c04method;
+package com.java1234.c09thread.c03method;
 
 /**
  * @author gaoxu

@@ -1,4 +1,4 @@
-package com.java1234.c19Serializable;
+package com.workingGet.c01JAXB.c19Serializable;
 
 import java.io.IOException;
 

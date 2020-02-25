@@ -6,7 +6,7 @@
     单线程例子：
         看代码c01，这是单线程的例子，2个方法，依次执行。
     多线程例子：
-        看代码c02，这是多线程的例子，2个方法，轮流执行。
+        看代码c021和c022，这是多线程的例子，2个方法，轮流执行。
     多线的实现
         1.继承Thread，实现run方法，看c01
             实例化：
@@ -14,14 +14,14 @@
                 Thread musicThread = new Thread(music);
                 musicThread.start();
         2.实现Runnable，实现run方法，看c02  
-            实例化方式1：独立资源，和上面一样。
+            实例化方式1：独立资源（类属性），和上面一样。
                 Eat eat1 = new Eat("张三线程");
                 Eat eat2 = new Eat("李四线程");
                 Thread eat1Thread = new Thread(eat1);
                 Thread eat2Thread = new Thread(eat2);
                 eat1Thread.start();
                 eat2Thread.start();
-            实例化方式2：资源共享，如果未加锁，可能资源重复使用
+            实例化方式2：资源共享（类属性） ，如果未加锁，可能资源重复使用
                 Eat t1 = new Eat("超级张三线程");
                 Thread t11 = new Thread(t1);
                 Thread t12 = new Thread(t1);
@@ -30,6 +30,7 @@
                 t12.start();
                 t13.start();
     线程共享资源加锁
+        被synchronized锁住的区域，只允许一个线程访问。
         1.run方法上加synchronized，这样当一个线程在调用run方式的时候，其他线程只能排队等待。
         2.run方法内需要同步的代码块加synchronized(this){}，这样当一个线程在调用同步代码块的时候，其他线程只能排队等待。
         原理：

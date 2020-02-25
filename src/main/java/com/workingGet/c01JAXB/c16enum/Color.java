@@ -1,6 +1,4 @@
-package com.java1234.c16enum;
-
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+package com.workingGet.c01JAXB.c16enum;
 
 /**
  * @author gaoxu

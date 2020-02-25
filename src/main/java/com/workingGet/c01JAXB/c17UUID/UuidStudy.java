@@ -1,4 +1,4 @@
-package com.java1234.c17UUID;
+package com.workingGet.c01JAXB.c17UUID;
 
 import java.util.UUID;
 

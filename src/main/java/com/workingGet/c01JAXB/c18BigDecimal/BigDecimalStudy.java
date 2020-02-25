@@ -1,4 +1,4 @@
-package com.java1234.c18BigDecimal;
+package com.workingGet.c01JAXB.c18BigDecimal;
 
 import java.math.BigDecimal;
 

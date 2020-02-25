@@ -1,4 +1,4 @@
-package com.java1234.c09thread.c02extendsThread;
+package com.java1234.c09thread.c021extendsThread;
 
 public class Music extends Thread {
 
