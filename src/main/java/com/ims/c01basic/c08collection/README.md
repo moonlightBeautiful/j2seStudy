@@ -1,0 +1,32 @@
+泛型学习
+    简介：
+       有了数组，为什么还要引入集合，引入数组个数是固定的，而集合的个数是可变的。
+    Collection：
+        集合的总接口
+    List： 有序，允许重复。
+        ArrayList：很少变化的
+        LinkedList：经常变化的，链表形式
+        方法：
+            size()：元素个数
+            get(index)：得到索引下的元素
+            add(index,value)：在指定位置插入元素
+            add(value)：在末尾添加元素
+            set(index,value):在所引出设置值，替换原来的元素
+            remove(index)：移除索处元素
+            remove(value)：移除第一个出现的元素
+            indexOf(value)：返回此元素第一次出现的索引
+        LinkedList多出来的方法
+            peekFirst()；获取第一个元素
+            peekLast()；获取最后一个个元素
+            pollFirst()；获取并移除第一个元素
+            pollLast()；获取并移除最后一个个元素
+    遍历集合
+        1.Iterator
+        2.forEach
+        3.index遍历
+    HashSet:
+        无序不重复  
+    HashMap
+        键值对
+        方法
+            ketSet()：获取key的set集合            
