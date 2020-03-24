@@ -1,9 +1,5 @@
 package com.ims.c01basic.c07Class;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 /**
  * 通过Class类的对象（记录对象的类的信息） 获取方法和属性
  * <p>

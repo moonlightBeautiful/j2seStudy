@@ -1,7 +1,6 @@
 package com.ims.c01basic.c07Class;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
