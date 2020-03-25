@@ -64,5 +64,10 @@ public class C02String {
          * str.trim（）
          * 返回去掉前后空格的str
          */
+
+        /**
+         * String.valueOf(Object)
+         * 返回object转换成的字符串
+         */
     }
 }
