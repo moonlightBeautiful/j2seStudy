@@ -11,17 +11,20 @@ package com.ims.c01basic.c11debug;
 public class DebugTest {
     private static int add(int a, int b) {
         int c = a + b;
+        String.valueOf(c);
         return c;
     }
 
     private static int add2(int a, int b) {
         int c = a + b;
+        add(a, b);
         return c;
     }
+
     public static void main(String[] args) {
         int a = 1;
         int b = 2;
-        int c = add(a, b); c = add2(a, b);
+        int c = add(a, b);c = add2(a, b);
         System.out.println(c);
     }
 }

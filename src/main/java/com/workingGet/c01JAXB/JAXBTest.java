@@ -5,34 +5,23 @@ import java.io.File;
 
 public class JAXBTest {
 
-    public void generateXML() {
-        Person person = new Person("abc", "ÄĞ", "±±¾©", "³¯ÑôÇø");
-        File file = new File("E:\\person.xml");
-        JAXBContext jc = null;
+    public void generateXML() throws JAXBException {
+        Hunter person = new Hunter();
+        File file = new File("person.xml");
+        JAXBContext jaxbContext = JAXBContext.newInstance(Hunter.class);
         try {
-            //¸ù¾İPersonÀàÉú³ÉÉÏÏÂÎÄ¶ÔÏó
-            jc = JAXBContext.newInstance(Person.class);
-            //´ÓÉÏÏÂÎÄÖĞ»ñÈ¡Marshaller¶ÔÏó£¬ÓÃ×÷½«bean±à×é(×ª»»)Îªxml
-            Marshaller ma = jc.createMarshaller();
-            //ÒÔÏÂÊÇÎªÉú³Éxml×öµÄÒ»Ğ©ÅäÖÃ
-            //¸ñÊ½»¯Êä³ö£¬¼´°´±êÇ©×Ô¶¯»»ĞĞ£¬·ñÔò¾ÍÊÇÒ»ĞĞÊä³ö
+            Marshaller ma = jaxbContext.createMarshaller();
             ma.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            //ÉèÖÃ±àÂë£¨Ä¬ÈÏ±àÂë¾ÍÊÇutf-8£©
             ma.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            //ÊÇ·ñÊ¡ÂÔxmlÍ·ĞÅÏ¢£¬Ä¬ÈÏ²»Ê¡ÂÔ£¨false£©
             ma.setProperty(Marshaller.JAXB_FRAGMENT, false);
-            //±à×é
             ma.marshal(person, file);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
-        /**
-         *  JDK1.7°æ±¾Ö®ºóÊ¹ÓÃ
-         */
-        /*Person person = new Person("abc", "ÄĞ", "±±¾©", "³¯ÑôÇø");
+        /*Person person1 = new Person();
         File file = new File("E:\\person2.xml");
-        JAXB.marshal(person, file);*/
+        JAXB.marshal(person1, file);*/
     }
 
 
@@ -40,15 +29,15 @@ public class JAXBTest {
         File file = new File("E:\\person.xml");
         JAXBContext jc = null;
         try {
-            jc = JAXBContext.newInstance(Person.class);
+            jc = JAXBContext.newInstance(Hunter.class);
             Unmarshaller uma = jc.createUnmarshaller();
-            Person person = (Person) uma.unmarshal(file);
+            Hunter person = (Hunter) uma.unmarshal(file);
             System.out.println(person);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
         /**
-         *  JDK1.7°æ±¾Ö®ºóÊ¹ÓÃ
+         *  JDK1.7?æ±¾??????
          */
        /* File file = new File("E:\\person2.xml");
         Person person = JAXB.unmarshal(file, Person.class);
@@ -57,7 +46,7 @@ public class JAXBTest {
 
     public static void main(String[] args) {
         JAXBTest jaxbTest = new JAXBTest();
-        jaxbTest.generateXML();
+        /*jaxbTest.generateXML();*/
         /*jaxbTest.generateBean();*/
     }
 }

@@ -13,8 +13,9 @@ public class AppTest {
      */
     @Test
     public void test() {
-        String s = "abc,";
+        String s = "abc";
         String[] ss = s.split(",");
+        System.out.println(ss.length);
         for(String temp : ss){
             System.out.println(temp);
         }
