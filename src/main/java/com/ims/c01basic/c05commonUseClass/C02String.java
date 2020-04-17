@@ -8,15 +8,15 @@ public class C02String {
         /**
          * 公共堆，不使用new，对String对象操作，等同于重新生成一个String对象
          */
-        String str1 = "123";    //公共堆区中 创建了123的空间
+       /* String str1 = "123";    //公共堆区中 创建了123的空间
         str1 += "abc";    //公共堆区中，丢掉了123的空间，然后创建了123abc的空间
-        System.out.println(str1);
+        System.out.println(str1);*/
 
         /**
          * 私有堆，使用new
          */
-        String str2 = new String("123");
-        System.out.println(str2);
+       /* String str2 = new String("123");
+        System.out.println(str2);*/
 
         /**
          * == 比较的是引用
@@ -27,8 +27,8 @@ public class C02String {
          * String.format("公式",""...)
          */
         //String.format("公式",""...)：输出格式化后的字符串。公式目前就知道%s：用后面的参数替换%s。
-        String s1 = String.format("你好：%s，%s！", "刘德华", "张学友");
-        System.out.println(s1);
+      /*  String s1 = String.format("你好：%s，%s！", "刘德华", "张学友");
+        System.out.println(s1);*/
 
         /**
          * str.chartAt（int index）
@@ -69,5 +69,10 @@ public class C02String {
          * String.valueOf(Object)
          * 返回object转换成的字符串
          */
+
+
+       /* String s = null;*/
+        String s = "";
+        System.out.println(s.split(",").length);
     }
 }

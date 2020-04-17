@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class C01arrayList {
     public static void main(String[] args) {
-        List<String> arrayList = new ArrayList<String>();
+        /*List<String> arrayList = new ArrayList<String>();
         arrayList.add("张三");
         arrayList.add("李四");
         System.out.println("集合大小，size()");
@@ -34,6 +34,18 @@ public class C01arrayList {
         arrayList.remove(0);
         for (String s : arrayList) {
             System.out.println(s);
-        }
+        }*/
+
+        /**
+         * 交集、并集、差集
+         */
+        List<String> list1 = new ArrayList<String>();
+        list1.add("A");
+        list1.add("B");
+        List<String> list2 = new ArrayList<String>();
+        list2.add("C");
+        System.out.println(list1.retainAll(list2));//不知道true和false的含义
+        System.out.println(list1.size());  //
+        System.out.println(list2);
     }
 }

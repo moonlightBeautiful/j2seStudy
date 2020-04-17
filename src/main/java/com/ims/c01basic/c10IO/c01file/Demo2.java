@@ -9,8 +9,10 @@ public class Demo2 {
      * 文件是否存在、删除文件
      */
     public static void main(String[] args) throws IOException {
-        File file = new File("c://java测试目录//java测试文件.properties");
-        if (file.exists()) { //判断文件是否存在
+        File file = new File("F://java测试目录//java测试文件.properties");
+        file.getParentFile().delete();
+        System.out.println(file.delete());
+        /*if (file.exists()) { //判断文件是否存在
             boolean b = file.delete(); // 删除已存在的文件
             if (b) {
                 System.out.println("删除文件成功");
@@ -26,7 +28,7 @@ public class Demo2 {
                     System.out.println("删除目录失败");
                 }
             }
-        }
+        }*/
 
     }
 }
