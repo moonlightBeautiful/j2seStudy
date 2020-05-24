@@ -20,7 +20,7 @@
             表达式？表达式true返回值:表达式false返回值
     6.选择和循环语句
         if(){}else{}
-        switch(){case n: {...，break;} break;{...，break;} default:{}}
+        switch(var){case n: {...，;break;} case m:{...，;break;} default:{}}
         while(){}  do{}while()
         for(){}
         break continue  可以指定跳到位置 return 可以指定跳出、继续位置标识符随意

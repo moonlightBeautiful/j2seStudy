@@ -70,9 +70,19 @@ public class C02String {
          * 返回object转换成的字符串
          */
 
+        /**
+         * 字符串转数组
+         */
+        /*String s1 = null;  //无法转数组
+        String[] strArray1 = s1.split(",");
+        System.out.println(strArray1.length);
+        String s2 = "1,2,3";
+        String[] strArray2 = s2.split(",");
+        System.out.println(strArray2.length);*/
 
-       /* String s = null;*/
-        String s = "";
-        System.out.println(s.split(",").length);
+        /**
+         * 字符串替换
+         */
+        //System.out.println("A".replaceFirst("A", "B"));
     }
 }
