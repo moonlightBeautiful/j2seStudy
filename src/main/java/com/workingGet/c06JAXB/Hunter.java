@@ -1,4 +1,4 @@
-package com.workingGet.c01JAXB;
+package com.workingGet.c06JAXB;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;

@@ -1,8 +1,7 @@
-package com.workingGet.c01JAXB;
+package com.workingGet.c06JAXB;
 
 import javax.xml.bind.*;
 import java.io.File;
-import java.util.*;
 
 /**
  * @author: GaoXu

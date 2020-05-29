@@ -22,7 +22,9 @@ public class BasicGrammarStudy {
         System.out.println(d);
         /**
          * 字符：单一的 16 位 Unicode 字符
-         * 普通字符：'A'等。转义字符：\开头，'\n'、’\\'。unicode码 斜巷u开头
+         *      普通字符：'A'等。
+         *      转义字符：不能显示的ASCII字符使用转义字符标识。转义字符标识= \+ASCII字符 ，例如 '\n'、’\\'。
+         *      unicode码：斜巷u开头 '\u66f0'
          * 全世界的语言都可以用Unicode码表示
          */
         char a = 'A';

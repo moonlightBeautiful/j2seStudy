@@ -1,4 +1,4 @@
-package com.workingGet.c01JAXB;
+package com.workingGet.c06JAXB;
 
 import javax.xml.bind.annotation.*;
 
@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement()
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlAccessorOrder(XmlAccessOrder.UNDEFINED)
-public class Cat {
+public class Dog {
     @XmlElement
     private String name;
     @XmlElement
     private String type;
 
-    public Cat() {
+    public Dog() {
     }
 
-    public Cat(String name, String type) {
+    public Dog(String name, String type) {
         this.name = name;
         this.type = type;
     }

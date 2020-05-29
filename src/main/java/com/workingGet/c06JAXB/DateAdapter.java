@@ -1,4 +1,4 @@
-package com.workingGet.c01JAXB;
+package com.workingGet.c06JAXB;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.text.SimpleDateFormat;
